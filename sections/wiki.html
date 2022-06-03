@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html id="wikiScroll" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Tech</title>
+</head>
+<body class="wikiback">
+    <nav class="nav navWiki">
+        <div class="nav_logo"></div>
+        <div class="nav_selectors_container">
+            <div class="nav_home nav_selectors">
+                <a href="../index.html"><i class="fas fa-home navIcon"></i><span class="navSpan">Home</span></a>
+            </div>
+            <div class="nav_gamemodes nav_selectors">
+                <a href="gamemodes.html"><i class="fas fa-globe-europe"></i></i><span class="navSpan">Discover</span></a>
+            </div>
+            <div class="nav_champions nav_selectors">
+                <a href="champions.html"><i class="fas fa-user navIcon"></i><span class="navSpan">Champions</span></a>
+            </div>
+            <div class="nav_wiki nav_selectors">
+                <a href="wiki.html"><i class="fas fa-book navIcon"></i><span class="navSpan">Wiki</span></a>
+            </div>
+            <div class="nav_mailsupport nav_selectors">
+                <a href="contact.html"><i class="fas fa-hands-helping navIcon"></i><span class="navSpan">Need Help?</span></a>
+            </div>
+        </div>
+    </nav>
+    <aside class="aside">
+        <div class="aside_container">
+            <div class="aside_item" id="aside_title">
+                <h2>Champion statistic</h2>
+            </div>
+            <div class="aside_item">
+                <a href="#offensive">Offensive</a>
+            </div>
+            <div class="aside_item">
+                <a href="#defensive">Defensive</a>
+            </div>
+            <div class="aside_item">
+                <a href="#utility">Utility</a>
+            </div>
+             <div class="aside_item">
+                <a href="#other">Other</a>
+            </div>
+            <div class="aside_item">
+                <a href="#increasingstatistics">Increasing Statistics</a>
+            </div>
+            <div class="aside_item">
+                <a href="#growth">Growth statistic calc.</a>
+            </div>
+            <div class="aside_item">
+                <a href="#notes">Notes</a>
+            </div>
+            <div class="aside_item">
+                <a href="#infinitestatstacking">Infinite Stat Stacking</a>
+            </div>
+            <div class="aside_item" id="aside_item_bot">
+                <a href="#seealso">See also</a>
+            </div>
+        </div>
+    </aside>
+    <article class="article">
+        <div class="group">
+            <div class="article_title">
+                <h1 id="h1title">Introduction to: Champion statistic</h1>
+            </div>
+            <div class="article_text">
+                <p>A <strong>champion statistic</strong> is a number indicating how well a champion can do a certain thing. These help define the assets of a <a class="a_yellow" href="#">champion</a>. There are 24 statistics, divided into 4 categories: Offensive, Defensive, Utility and Other.</p>
+            </div>
+            <div class="content">
+                <div class="content_title">
+                    <h2>Content</h2>
+                </div>
+                <div class="content_subtitle">
+                    <ul>
+                        <li><a href="#offensive"><span>1.</span> Offensive</a></li>
+                        <li><a href="#defensive"><span>2.</span> Defensive</a></li>
+                        <li><a href="#utility"><span>3.</span> Utility</a></li>
+                        <li><a href="#other"><span>4.</span> Other</a></li>
+                        <li><a href="#increasingstatistics"><span>5.</span> Increasing Statistics</a></li>
+                        <li><a href="#growth" style="margin-left: 10px;"><span>5.1</span> Growth statistic calculations</a></li>
+                        <li><a href="#notes"><span>6.</span> Notes</a></li>
+                        <li><a href="#infinitestatstacking"><span>7.</span> Infinite Stat Stacking</a></li>
+                        <li><a href="#seealso"><span>8.</span> See also</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="offensive">Offensive</h1>
+            </div>
+            <div class="article_text">
+                <ul>
+                    <li><a class="a_yellow" href="#">Ability power</a>: Provides scaling on some abilities.</li>
+                    <li><a class="a_yellow" href="#">Armor penetration</a>: How much the armor values of targets are reduced during <span class="ad">physical damage</span> calculations.</li>
+                    <li><a class="a_yellow" href="#">Attack damage</a>: Provides the initial damage value of basic attacks and scaling on some abilities.</li>
+                    <li><a class="a_yellow" href="#">Attack speed</a>: The rate at which a champion uses their basic attack and scaling a few abilities.</li>
+                    <li><a class="a_yellow" href="#">Critical strike chance</a>: The percent chance that a basic attack will critically strike to deal increased damage.</li>
+                    <li><a id="adcritdmg" class="a_yellow" href="#">Critical strike damage</a>: The percentage damage increase provided by <span class="adcritchance">critical strike chance</span>.</li>
+                    <li><a class="a_yellow" href="#">Life steal</a>: The percentage of the damage done by a champion's basic attacks that is returned to them as <span class="hp">health.</span></li>
+                    <li><a class="a_yellow" href="#">Magic penetration</a>: How much the <a class="a_yellow" href="#">magic resistance</a> values of targets are reduced during <span class="ap">magic damage</span> calculations.</li>
+                    <li><a class="a_yellow" href="#">Omnivamp</a>: The percentage of the damage done by a champion that is returned to them as health.</li>
+                    <li><a class="a_yellow" href="#">Physical vamp</a>: The percentage of the physical damage done by a champion that is returned to them as <span class="hp">health</span>.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="defensive">Defensive</h1>
+            </div>
+            <div class="article_text">
+                <ul>
+                    <li><a class="a_yellow" href="#">Armor</a>: Used to calculate the reduced damage (in percentage) taken from basic attacks and abilities that deal <span class="ad">physical damage</span>. Calculated by <span class="armor">armor</span> ÷ (<span class="armor">armor</span> + 100)</li>
+                    <li><a class="a_yellow" href="#">Heal and shield power</a>: Increases the strength of heals and shields.</li>
+                    <li><a class="a_yellow" href="#">Health</a>: The total damage a champion may take before dying.</li>
+                    <li><a class="a_yellow" href="#">Health regeneration</a>: The rate at which a champion's <span class="hp">health</span> is naturally restored.</li>
+                    <li><a class="a_yellow" href="#">Magic resistance</a>: Used to calculate the reduced damage (in percentage) taken from abilities that deal <span class="ap">magic damage</span>. Calculated by <span class="mr">MR</span> ÷ (<span class="mr">MR</span> + 100).</li>
+                    <li><a class="a_yellow" href="#">Tenacity</a>: Measured in percentages of how much the duration of most disables will be reduced.</li>
+                    <li><a class="a_yellow" href="#">Slow resist</a>: Measured in percentages of how much the strength of slows will be reduced.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="utility">Utility</h1>
+            </div>
+            <div class="article_text">
+                <ul>
+                    <li><a class="a_yellow" href="#">Ability haste</a>: Reduces the time after an ability is used by a champion before it can be used again.</li>
+                    <li><a class="a_yellow" href="#">Energy</a>: The <span class="eng">maximum energy</span> available to a champion for casting abilities.</li>
+                    <li><a class="a_yellow" href="#">Energy regeneration</a>: The rate at which a champion's <span class="eng">energy</span> is naturally restored.</li>
+                    <li><a class="a_yellow" href="#">Mana</a>: The <span class="man">maximum mana</span> available to a champion for casting abilities.</li>
+                    <li><a class="a_yellow" href="#">Mana regeneration</a>: The rate at which a champion's <span class="man">mana</span> is naturally restored.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="other">Other</h1>
+            </div>
+            <div class="article_text">
+                <ul>
+                    <li><a class="a_yellow" id="exp" href="#">Experience</a>: The way champions level up periodically.</li>
+                    <li><a class="a_yellow" id="gold" href="#">Gold generation</a>: The rate of passive gold income.</li>
+                    <li><a class="a_yellow" href="#">Movement speed</a>: The speed at which a champion moves around the map.</li>
+                    <li><a class="a_yellow" id="rng" href="#">Range</a>: Measurement used to determine how far an autoattack or ability can reach (referred to as attack range or ability range respectively).</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="increasingstatistics">Increasing Statistics</h1>
+            </div>
+            <div class="article_text">
+                <p>All champions begin the game with a certain amount of attack damage, attack speed, armor, magic resistance, health, health regeneration, resource or mana, and resource or mana regeneration. This is called the base value of that statistic. All champions naturally increase these stats by a non-linear amount every time they gain a level.</p>
+                <p>All champions have the same formula for calculating their statistics (see below). Obviously, all champions go through the same 18 levels during the game. However, each champion and skill has a different growth statistic. For example, the <span class="ad">AD</span> growth statistic for Singed Singed is 3.375, but his <span class="man">mana</span> growth statistic is 45. Kog'Maw Kog'Maw has <span class="ad">AD</span> and <span class="man">mana</span> growth statistics of 2.41 and 40, which are different than Singed Singed. Currently, Gnar Gnar is the only champion who can modify his growth statistics. All other champions have fixed growth statistics.</p>
+                <p class="wikiSpan">Statistic = b + g x ( n - 1 ) x ( 0.7025 + 0.0175 x ( n - 1 ) )</p>
+                <ul>
+                    <li>b = base</li>
+                    <li>g = growth statistic</li>
+                    <li>n = champion level</li>
+                    <li>(n - 1) = total amount of level ups</li>
+                </ul>
+                <p>For example, <a href="#" class="a_yellow">Alistar</a> starts level 1 with <strong>600</strong> <span class="hp">health</span> (<span class="hp">health base</span> statistic), and his <span class="hp">health growth</span> statistic is <strong>106</strong>. At level 2, the equation shows that his <span class="hp">total health</span> is <strong>676.32</strong> displayed in game as a rounded value <strong>676</strong> (n = 2, g = 106, and b= 600).</p>
+                <p>Importantly, each champion's base statistics and growth statistics are unique. This makes a big difference on the battlefield. If a champion has low base statistics but high growth statistics, they will be weak at the game's beginning but strong at the game's end.</p>
+                <p>Five statistics that deviate from this pattern are <a href="#adcritdmg" class="a_yellow">critical strike damage</a>, <a href="#rng" class="a_yellow">range</a>, <a href="#exp" class="a_yellow">experience</a>, <a href="#gold" class="a_yellow">gold generation</a> and movement speed. All champions start with <span class="adcritdmg">175% base critical damage</span> (even Ashe, Jhin and Yasuo despite their innate passives). All champions start the game with the same <a href="#gold" class="a_yellow">Gold generation</a> and need the same amount of experience to level up. Every champion has unique base range and movement speed that do not increase naturally. Natural increase is meant to be as from leveling up itself, innate passives as Tristana's Draw a Bead or Cassiopeia's Serpentine Grace, despite being per-level innates, are not considered to be natural stat increases.</p>
+
+                <p>All other statistics have a natural value of zero and must be increased by other sources. The ways a champion may increase their statistics are varied and include <a href="#" class="a_yellow">runes</a>, <a href="#" class="a_yellow">items</a>, and <a href="#" class="a_yellow">auras</a>. Some champion abilities increase that champion's statistics, either as a passive effect ( <a href="#" class="a_yellow">Nasus'</a> <a href="#" class="a_yellow">Soul Eater</a> passively increases his <a href="#" class="a_yellow">life steal</a>) or as an active effect (<a href="#" class="a_yellow">Jax's</a> <a href="#" class="a_yellow">Grandmaster's Might</a> briefly increases his <a href="#" class="a_yellow">armor</a> and <a href="#" class="a_yellow">MR</a>) or as an effect that follows another action (<a href="#" class="a_yellow">Nocturne's</a> <a href="#" class="a_yellow">Shroud of Darkness</a>, for example, passively increases his <a href="#" class="a_yellow">attack speed</a> and doubles this bonus when he absorbs a spell).</p>
+
+                <h2 id="growth">Growth statistic calculations</h2>
+                <p>Since patch <a href="#" class="a_yellow">V4.20</a>, champions do not gain stats linearly with levels. Instead, their increase in strength stats accelerates at higher levels. The above equation can be rearranged to:</p>
+                <p class="wikiSpan">StatIncrease = g x ( 0.65 + 0.035 x NewLevel )</p>
+                <ul>
+                    <li>g = growth statistic</li>
+                </ul>
+                <p><a href="#" class="a_yellow">Kalista's</a> growth statistic for <span class="hp">health</span> is 100. When leveling-up from level 1 to level 2, the number in the brackets becomes 0.72 (or 72%) and her <span class="hp">total health</span> will increase by 72 (g = 100 and NewLevel = 2). To explain it another way, her growth statistic (100) was multiplied by 72% giving <span class="hp">72 health</span>. However, when leveling-up from 15 to 16, the percent increase is 121% and the health increase is much higher at <span class="hp">121 health</span> (g = 100 and NewLevel = 16).</p>
+                <p>At level 18, the champion will have accumulated 1700% of the growth stats (17 x growth stats), so she ends with 17 x <strong>growth stats + base stats</strong>.</p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="notes">Notes</h1>
+            </div>
+            <div class="article_text">
+                <ul>
+                    <li>As of patch V4.20, champion statistics such as health, attack damage, etc. are listed as having a given base value. This is the value at Level 1.[1] (You can also verify this yourself by entering a game with no runes and viewing your champion statistics).</li>
+                    <li>Any unit's attack damage, ability power, armor, magic resistance, attack speed, movement speed, ability haste and critical strike chance, can be seen by selecting that unit in game, along with two bars indicating their current and maximum health and mana (or equivalent resource).</li>
+                    <li>Player's health regeneration, mana regeneration, armor penetration, magic penetration, life steal, physical vamp, omnivamp, attack range, and Tenacity can be additionally seen by opening advanced player stats (default binding to C).</li>
+                    <li style="margin-left: 50px;">Gold generation and Heal and shield power must be calculated by the player during the game.</li>
+                    <li>If the value is written in white, that unit has only the base amount of that statistic. If the value is written in bold yellow, that statistic has been increased from the base amount through external means. By hovering the cursor over almost any stat the base amount is displayed in tooltip in blue plus bonus amount in green. The total of stat is either blue if there is no bonus amount, or green. This applies to all visible stats with exception of penetrations, health and resource bar.</li>
+                    <li>If the total value of stat is written in bold yellow, but in blue in tooltip, then the stat has not been really increased, just displayed as rounded up. This also doesn't apply to penetration stats, health and resource bar.</li>
+                    <li>Hovering the cursor over health and resource bar additionally displays values of health and resource regeneration in respective base units per second while hovering over regeneration stats themselves in the stat table displays values in traditional base units per 5 seconds.</li>
+                    <li>Armor penetration and magic penetration use own unique format 'F | P%', where F shows flat penetration and P percentage penetration in percent. All four values are always written in blue regardless of being externally modified or not (as all champions have base penetration values of 0, the color exception is purely aesthetical).</li>
+                    <li>Armor and magic resistance also include the resulting damage reduction in own tooltips.</li>
+                    <li>Total critical damage is not shown in the player stats in game. However, base critical damage is misleadingly displayed as base critical damage bonus in tooltip of Critical Strike with literal value of 175%.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="article_title">
+                <h1 id="infinitestatstacking">Infinite Stat Stacking</h1>
+            </div>
+            <div class="article_text">
+                <p>The following 8 champions can stack a stat infinitely: <a href="#" class="a_yellow">Cho'Gath</a>, <a href="#" class="a_yellow">Senna</a>, <a href="#" class="a_yellow">Shyvana</a>, <a href="#" class="a_yellow">Sion</a>, <a href="#" class="a_yellow">Swain</a>, <a href="#" class="a_yellow">Sylas</a>, <a href="#" class="a_yellow">Thresh</a>, and <a href="#" class="a_yellow">Veigar</a>.</p>
+                <p>Cho'Gath, Sion, and Swain stack health infinitely, Senna can stack range, AD, and life steal infinitely, Shyvana can stack resistances infinitely, Veigar can stack AP infinitely, and Thresh can stack both AP and armor infinitely. In addition, Nasus can stack damage on his Q infinitely, and Bard can stack damage on meeps infinitely.</p>
+            </div>
+        </div>
+        <div class="group" style="margin-bottom: 75px;">
+            <div class="article_title">
+                <h1 id="seealso">See Also</h1>
+            </div>
+            <div class="article_text" >
+                <ul>
+                    <li><a class="a_yellow" href="#">Base champion statistics</a></li>
+                    <li><a class="a_yellow" href="#">Champion statistics at level 18</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

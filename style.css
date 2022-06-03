@@ -1,0 +1,1000 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: beaufort;
+    src: url(font-face/beaufort.ttf);
+}
+
+/* NAV NAV NAV */
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background: rgba(26, 27, 29);
+    border-bottom: 2px solid rgb(170, 142, 50);
+}
+
+.nav_logo{
+    display: flex;
+    width: 10%;
+    height: 60%;
+    background-image: url(./img/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav_selectors_container{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+.nav_selectors{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-family: beaufort;
+    color: rgb(170, 142, 50);
+    flex-grow: 1;
+}
+
+.nav_selectors a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: rgb(170, 142, 50);
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav_selectors a:hover{
+    background-color: rgb(170, 142, 50);
+    color: rgba(26, 27, 29);
+}
+
+/* WIKI INDEX */
+
+.wikiback{
+    background-image: url(./img/back.jpg);
+    background-size: 40%;
+}
+
+#wikiScroll{
+    scroll-behavior: smooth;
+}
+
+.article_text p, .article_text li {
+    font-size: 20px;
+    line-height: 30px
+}
+
+.navWiki{
+    margin-top: 0vh;
+    position: fixed;
+}
+
+.aside{
+    display: none;
+}
+
+.article{
+    margin-top: 0vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    width: 100vw;
+    height: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    background-color: rgba(26, 27, 29);
+    border-radius: 0;
+}
+
+.group{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    margin-bottom: 0vh;
+}
+
+.a_yellow{
+    color: #ffc971;
+    font-weight: bold;
+    text-decoration-line: none;
+    transition: 0.2s;
+}
+
+.a_yellow:hover{
+    text-decoration-line:underline;
+    color: rgb(255, 224, 172);
+    
+}
+
+.group h1{
+    font-size: 2.5rem;
+    width: 100%;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    line-height: 50px;
+}
+
+#h1title{
+    font-size: 3rem;
+    border-bottom: 0px solid white;
+}
+
+.content{
+    background-color: rgb(60, 62, 65);
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 330px;
+    height: 350px;
+}
+
+.content_title{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content_title h2{
+    margin: 0;
+    padding-left: 5%;
+    border-bottom: 1px solid white;
+    width: 100%;
+    line-height: 1.5em;
+}
+
+.content_subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 85%;
+}
+
+.content_subtitle ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+.content_subtitle li {
+    width: 100%;
+    height: 100%;
+}
+
+.content_subtitle li a {
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    text-decoration-line: none;
+    width: 100%;
+    transition: 0.3s
+}
+
+.content_subtitle li a:hover {
+    background-color: rgb(170, 142, 50);
+}
+
+.wikiSpan{
+    font-style: italic;
+    color: rgb(158, 158, 158);
+}
+
+.ad {
+    color: rgb(255, 136, 0);
+}
+
+.adcritchance {
+    color: rgb(255, 115, 0);
+}
+
+.adcritdmg {
+    color: rgb(253, 110, 53);
+}
+
+.ap {
+    color: rgb(160, 160, 255);
+}
+
+.man {
+    color: rgb(92, 133, 199);
+}
+
+.hp {
+    color: rgb(89, 200, 85);
+}
+
+.armor {
+    color: rgb(251, 255, 0);
+}
+
+.mr {
+    color: rgb(255, 0, 149);
+}
+
+.eng {
+    color: rgb(238, 240, 120);
+}
+
+/* CHAMPIONS INDEX */
+
+.champselect_back{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26, 27, 29, 0.953);
+    display: flex;
+    flex-direction: column;
+}
+
+#championsGrid{
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    "leonaContainer"
+    "luluContainer"
+    "threshContainer"
+    "sennaContainer";
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+#leonaContainer{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(./img/leonawr.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: leonaContainer;
+}
+
+#threshContainer{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(./img/threshwr.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: threshContainer;
+}
+
+#luluContainer{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(./img/luluwr.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: luluContainer;
+}
+
+#sennaContainer{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(./img/sennawr.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: sennaContainer;
+}
+
+.champTexts{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.champTexts:hover{
+    animation-name: textAppear;
+}
+
+.champTextInv{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 75%;
+}
+
+.champTextContainer{
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: 25%;
+    justify-content: center;
+    border-top: 2px solid rgb(170, 142, 50);
+    background-color: rgba(26, 27, 29, 0.953);
+    color: rgb(170, 142, 50);
+    font-family: beaufort;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    transition: 0.5s;
+}
+
+/* INDEX INDEX */
+
+.index_body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.index_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.navindex{
+    z-index: 10;
+    position: fixed;
+    height: 10vh;
+}
+
+.navSpan{
+    display: none;
+}
+
+#index_video{
+    position: fixed;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.index_play{
+    display: flex;
+    margin: auto;
+    position: fixed;
+    align-self: center;
+    background-color: rgb(26, 27, 29);
+    width: 80%;
+    height: 25%;
+    z-index: 20;
+    background-image: url(./img/logoindex.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 2px solid rgb(170, 142, 50);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* DISCOVER INDEX  */
+
+.discover_body{
+    background-color: rgb(26, 27, 29);
+}
+
+.discoverDemaciaContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/demaciaback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5vh;
+}
+
+.discoverNoxusContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/noxusback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5vh;
+}
+
+.discoverFreljordContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/freljordback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5vh;
+}
+
+.discoverPiltoverContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/piltoverback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.discoverTop{
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+}
+
+.discoverBot{
+    background: linear-gradient(0deg, rgba(26,27,29,0.5400035014005602) 0%, rgba(26,27,29,1) 76%);
+    border-top: 1px solid rgb(170, 142, 50);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+    color: rgb(189, 172, 139);
+    font-family: beaufort;
+    letter-spacing: 1px;
+}
+
+.discoverBot h2{
+    margin: 0;
+    padding: 0;
+}
+
+.discoverBotTitle{
+    display: flex;
+}
+
+.discoverBotText{
+    display: flex;
+    width: 80%;
+}
+
+/* CONTACT INDEX */
+
+.contact_body{
+    background-color: rgb(26, 27, 29);
+    width: 100%;
+    height: 100%;
+}
+
+#contactNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(26, 27, 29);
+    border-bottom: 2px solid rgb(170, 142, 50);
+    grid-area: contactNav;
+}
+
+#contactForm{
+    background-image: url(./img/contactformback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: contactForm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactFormContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 27, 29);
+    border: 1px solid rgb(170, 142, 50);
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+}
+
+.contactFormTitle{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(26, 27, 29);
+    color: rgb(170, 142, 50);
+    font-family: beaufort;
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgb(170, 142, 50)
+}
+
+.contactFormForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+}
+
+.contactFormInputs{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    border-right: 1px solid rgb(170, 142, 50)
+}
+
+.contactFormInputsInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.contactFormInputsInputs input{
+    width: 70%;
+}
+
+.contactFormInputsImg{
+    display:none;
+    background-image: url(./img/contactteemo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 40%;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+}
+
+.contactFormText{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactFormTextArea{
+    display: flex;
+    width: 80%;
+    height: 60%;
+}
+
+.contactFormTextInput{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contactFormTextInput input{
+    width: 50%
+}
+
+#contactOptions{
+    display: flex;
+    flex-direction: column;
+    grid-area: contactOptions;
+}
+
+.contactOptionsAnchors{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.contactOptionsA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color:rgb(26, 27, 29);
+}
+
+.contactOptionsA p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(66, 63, 63);
+    align-items: center;
+    font-family: beaufort;
+    color: rgb(245, 241, 226);
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+}
+
+.contactOptionsA a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: beaufort;
+    color: rgb(170, 142, 50);
+    font-size: 1.4rem;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.contactOptionsAnimation a:hover{
+    background-color: rgb(170, 142, 50);
+    color: rgba(26, 27, 29);
+}
+
+#contactFooter{
+    background-color: rgb(26, 27, 29);
+    grid-area: contactFooter;
+    border-top: 2px solid rgb(170, 142, 50);
+}
+
+#contactGrid{
+    background-color: rgb(52, 80, 113);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "contactNav contactNav" 
+    "contactForm contactForm"
+    "contactOptions contactOptions";
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr 6fr 0.5fr;
+}
+
+@keyframes textAppear{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }    
+}
+
+@media (min-width:768px) {
+    /* INDEX */
+    
+    .navindex{
+        height: 15vh;
+    }
+    
+    .navIcon{
+        display: none;
+    }
+
+    .navSpan{
+        display: flex;
+    }
+
+    .index_play{
+        width: 50%;
+        height: 30%;
+    }
+
+    /* DISCOVER INDEX */
+
+    .discoverTop{
+        height: 70%;
+    }
+
+    .discoverBot{
+        height: 30%;
+        letter-spacing: 2px;
+    }
+
+    .discoverBotText{
+        width: 90%;
+    }
+}
+
+@media (min-width:1024px) {
+    .gamemodes_body{
+        background-color: rgb(26, 27, 29);
+        color: white;
+    }
+
+    /* INDEX */
+    
+    .navindex{
+        height: 15vh;
+    }
+    
+    .navIcon{
+        display: flex;
+    }
+
+    .navSpan{
+        display: flex;
+    }
+
+    .index_play{
+        width: 40%;
+        height: 30%;
+    }
+
+    /* DISCOVER INDEX */
+
+    .discoverTop{
+        height: 75%;
+    }
+
+    .discoverBot{
+        height: 25%;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+
+    .discoverBotText{
+        width: 80%;
+    }
+
+    /* WIKI INDEX */
+    
+    .navWiki{
+        margin-top: -15vh;
+        position: fixed;
+    }
+
+    .article_text p, .article_text li {
+        font-size: 20px;
+        line-height: 40px
+    }
+    
+    .aside{
+        margin-left: 2vw;
+        display: flex;
+        position: fixed;
+        width: 20%;
+        height: 80vh;
+        background-color: rgba(26, 27, 29);
+        font-family: 'Space Grotesk', sans-serif;
+        color: white;
+        border-radius: 20px;
+    }
+    
+    .aside_container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #aside_title{
+        border: 0px solid rgb(170, 142, 50);
+        text-align: center;
+    }
+    
+    .aside_item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 11.1%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        justify-self: center;
+        border: 1px solid rgb(170, 142, 50);
+    }
+    
+    #aside_item_bot{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    .aside_item a{
+        display: flex;
+        color: white;
+        text-decoration-line: none;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        font-size: 20px;
+        letter-spacing: 2px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .aside_item a:hover{
+        background-color: rgb(170, 142, 50);
+    }
+
+    .article{
+        display: flex;
+        margin-top: 15vh;
+        flex-direction: column;
+        margin-left: 23%;
+        width: 75%;
+        height: 100%;
+        font-family: 'Space Grotesk', sans-serif;
+        color: white;
+        background-color: rgba(26, 27, 29);
+        border-radius: 20px;
+    }
+
+    /* CHAMPIONS INDEX */
+
+    #championsGrid{
+        grid-template-areas: 
+        "leonaContainer luluContainer"
+        "threshContainer sennaContainer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    #leonaContainer{
+        background-position: center;
+        grid-area: leonaContainer;
+    }
+    
+    #threshContainer{
+        background-position: center;
+        grid-area: threshContainer;
+    }
+    
+    #luluContainer{
+        background-position: center;
+        grid-area: luluContainer;
+    }
+    
+    #sennaContainer{
+        background-position: center;
+        grid-area: sennaContainer;
+    }
+    
+    .champTextContainer{
+        font-size: 1.4rem;
+    }
+
+    /* CONTACT INDEX */
+    
+    .contact_body{
+        background-color: rgb(26, 27, 29);
+        width: 100%;
+        height: 100%;
+    }
+    
+    #contactNav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: rgb(26, 27, 29);
+        border-bottom: 2px solid rgb(170, 142, 50);
+        grid-area: contactNav;
+    }
+    
+    #contactForm{
+        background-image: url(./img/contactformback.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: contactForm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contactFormContainer{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(26, 27, 29);
+        border: 1px solid rgb(170, 142, 50);
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .contactFormTitle{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background-color: rgb(26, 27, 29);
+        color: rgb(170, 142, 50);
+        font-family: beaufort;
+        font-size: 1.6rem;
+        border-bottom: 1px solid rgb(170, 142, 50)
+    }
+    
+    .contactFormForm{
+        flex-direction: row;
+    }
+    
+    .contactFormInputs{
+        height: 100%;
+        width: 30%;
+    }
+    
+    .contactFormInputsInputs{
+        width: 100%;
+        height: 40%;
+    }
+    .contactFormInputsInputs input{
+        width: 70%;
+    }
+    
+    .contactFormInputsImg{
+        display: flex;
+    }
+    
+    .contactFormText{
+        width: 70%;
+    }
+    
+    .contactFormTextArea{
+        width: 80%;
+        height: 60%;
+    }
+    
+    .contactFormTextInput{
+        width: 100%;
+    }
+    
+    .contactFormTextInput input{
+        width: 50%
+    }
+    
+    #contactOptions{
+        display: flex;
+        flex-direction: column;
+        grid-area: contactOptions;
+    }
+    
+    #contactGrid{
+        background-color: rgb(52, 80, 113);
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+        "contactNav contactNav" 
+        "contactForm contactOptions"
+        "contactFooter contactFooter";
+        grid-template-columns: 8fr 2fr;
+        grid-template-rows: 1fr 6fr 0.5fr;
+    }
+
+}
