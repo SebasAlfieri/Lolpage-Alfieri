@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Tech</title>
+    <title>Wiki</title>
 </head>
 <body class="wikiback">
     <nav class="nav navWiki">
-        <div class="nav_logo"></div>
+        <a href="../index.html" class="nav_logo"></a>
         <div class="nav_selectors_container">
             <div class="nav_home nav_selectors">
                 <a href="../index.html"><i class="fas fa-home navIcon"></i><span class="navSpan">Home</span></a>
@@ -22,6 +22,9 @@
             <div class="nav_champions nav_selectors">
                 <a href="champions.html"><i class="fas fa-user navIcon"></i><span class="navSpan">Champions</span></a>
             </div>
+            <div class="nav_champions nav_selectors">
+                <a href="skins.html"><i class="fas fa-user navIcon"></i><span class="navSpan">Skins</span></a>
+            </div>
             <div class="nav_wiki nav_selectors">
                 <a href="wiki.html"><i class="fas fa-book navIcon"></i><span class="navSpan">Wiki</span></a>
             </div>
@@ -30,7 +33,7 @@
             </div>
         </div>
     </nav>
-    <aside class="aside">
+    <nav class="aside">
         <div class="aside_container">
             <div class="aside_item" id="aside_title">
                 <h2>Champion statistic</h2>
@@ -63,7 +66,7 @@
                 <a href="#seealso">See also</a>
             </div>
         </div>
-    </aside>
+    </nav>
     <article class="article">
         <div class="group">
             <div class="article_title">
@@ -76,7 +79,7 @@
                 <div class="content_title">
                     <h2>Content</h2>
                 </div>
-                <div class="content_subtitle">
+                <nav class="content_subtitle">
                     <ul>
                         <li><a href="#offensive"><span>1.</span> Offensive</a></li>
                         <li><a href="#defensive"><span>2.</span> Defensive</a></li>
@@ -88,10 +91,10 @@
                         <li><a href="#infinitestatstacking"><span>7.</span> Infinite Stat Stacking</a></li>
                         <li><a href="#seealso"><span>8.</span> See also</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </div>
-        <div class="group">
+        <section class="group">
             <div class="article_title">
                 <h1 id="offensive">Offensive</h1>
             </div>
@@ -109,8 +112,8 @@
                     <li><a class="a_yellow" href="#">Physical vamp</a>: The percentage of the physical damage done by a champion that is returned to them as <span class="hp">health</span>.</li>
                 </ul>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="defensive">Defensive</h1>
             </div>
@@ -125,8 +128,8 @@
                     <li><a class="a_yellow" href="#">Slow resist</a>: Measured in percentages of how much the strength of slows will be reduced.</li>
                 </ul>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="utility">Utility</h1>
             </div>
@@ -139,8 +142,8 @@
                     <li><a class="a_yellow" href="#">Mana regeneration</a>: The rate at which a champion's <span class="man">mana</span> is naturally restored.</li>
                 </ul>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="other">Other</h1>
             </div>
@@ -152,8 +155,8 @@
                     <li><a class="a_yellow" id="rng" href="#">Range</a>: Measurement used to determine how far an autoattack or ability can reach (referred to as attack range or ability range respectively).</li>
                 </ul>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="increasingstatistics">Increasing Statistics</h1>
             </div>
@@ -182,8 +185,8 @@
                 <p><a href="#" class="a_yellow">Kalista's</a> growth statistic for <span class="hp">health</span> is 100. When leveling-up from level 1 to level 2, the number in the brackets becomes 0.72 (or 72%) and her <span class="hp">total health</span> will increase by 72 (g = 100 and NewLevel = 2). To explain it another way, her growth statistic (100) was multiplied by 72% giving <span class="hp">72 health</span>. However, when leveling-up from 15 to 16, the percent increase is 121% and the health increase is much higher at <span class="hp">121 health</span> (g = 100 and NewLevel = 16).</p>
                 <p>At level 18, the champion will have accumulated 1700% of the growth stats (17 x growth stats), so she ends with 17 x <strong>growth stats + base stats</strong>.</p>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="notes">Notes</h1>
             </div>
@@ -201,8 +204,8 @@
                     <li>Total critical damage is not shown in the player stats in game. However, base critical damage is misleadingly displayed as base critical damage bonus in tooltip of Critical Strike with literal value of 175%.</li>
                 </ul>
             </div>
-        </div>
-        <div class="group">
+        </section>
+        <section class="group">
             <div class="article_title">
                 <h1 id="infinitestatstacking">Infinite Stat Stacking</h1>
             </div>
@@ -210,8 +213,8 @@
                 <p>The following 8 champions can stack a stat infinitely: <a href="#" class="a_yellow">Cho'Gath</a>, <a href="#" class="a_yellow">Senna</a>, <a href="#" class="a_yellow">Shyvana</a>, <a href="#" class="a_yellow">Sion</a>, <a href="#" class="a_yellow">Swain</a>, <a href="#" class="a_yellow">Sylas</a>, <a href="#" class="a_yellow">Thresh</a>, and <a href="#" class="a_yellow">Veigar</a>.</p>
                 <p>Cho'Gath, Sion, and Swain stack health infinitely, Senna can stack range, AD, and life steal infinitely, Shyvana can stack resistances infinitely, Veigar can stack AP infinitely, and Thresh can stack both AP and armor infinitely. In addition, Nasus can stack damage on his Q infinitely, and Bard can stack damage on meeps infinitely.</p>
             </div>
-        </div>
-        <div class="group" style="margin-bottom: 75px;">
+        </section>
+        <section class="group" style="margin-bottom: 75px;">
             <div class="article_title">
                 <h1 id="seealso">See Also</h1>
             </div>
@@ -221,7 +224,8 @@
                     <li><a class="a_yellow" href="#">Champion statistics at level 18</a></li>
                 </ul>
             </div>
-        </div>
+        </section>
     </article>
+    <footer></footer>
 </body>
 </html>

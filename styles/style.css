@@ -25,10 +25,15 @@ body{
     display: flex;
     width: 10%;
     height: 60%;
-    background-image: url(./img/logo.png);
+    background-image: url(../img/logo.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.nav_logo:hover{
+    filter: drop-shadow(0px 0px 10px rgb(170, 142, 50));
 }
 
 .nav_selectors_container{
@@ -69,7 +74,7 @@ body{
 /* WIKI INDEX */
 
 .wikiback{
-    background-image: url(./img/back.jpg);
+    background-image: url(../img/back.jpg);
     background-size: 40%;
 }
 
@@ -270,7 +275,7 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url(./img/leonawr.jpg);
+    background-image: url(../img/leonawr.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -284,7 +289,7 @@ body{
     text-decoration: none;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(./img/threshwr.jpg);
+    background-image: url(../img/threshwr.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -298,7 +303,7 @@ body{
     text-decoration: none;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(./img/luluwr.jpg);
+    background-image: url(../img/luluwr.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -312,7 +317,7 @@ body{
     text-decoration: none;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(./img/sennawr.jpg);
+    background-image: url(../img/sennawr.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -398,7 +403,7 @@ body{
     width: 80%;
     height: 25%;
     z-index: 20;
-    background-image: url(./img/logoindex.png);
+    background-image: url(../img/logoindex.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -424,7 +429,7 @@ body{
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-image: url(./img/demaciaback.jpg);
+    background-image: url(../img/demaciaback.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -434,7 +439,7 @@ body{
 .discoverNoxusContainer{
     width: 100%;
     height: 100vh;
-    background-image: url(./img/noxusback.jpg);
+    background-image: url(../img/noxusback.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -444,7 +449,7 @@ body{
 .discoverFreljordContainer{
     width: 100%;
     height: 100vh;
-    background-image: url(./img/freljordback.jpg);
+    background-image: url(../img/freljordback.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -454,7 +459,7 @@ body{
 .discoverPiltoverContainer{
     width: 100%;
     height: 100vh;
-    background-image: url(./img/piltoverback.jpg);
+    background-image: url(../img/piltoverback.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -519,7 +524,7 @@ body{
 }
 
 #contactForm{
-    background-image: url(./img/contactformback.jpg);
+    background-image: url(../img/contactformback.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -583,7 +588,7 @@ body{
 
 .contactFormInputsImg{
     display:none;
-    background-image: url(./img/contactteemo.png);
+    background-image: url(../img/contactteemo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -593,7 +598,7 @@ body{
 }
 
 .contactFormInputsImg:hover{
-    background-image: url(./img/contactteemo2.png);
+    background-image: url(../img/contactteemo2.png);
 }
 
 textarea{
@@ -764,6 +769,160 @@ textarea{
     .discoverBotText{
         width: 90%;
     }
+}
+
+
+#skinsBody{
+    background-color: rgb(26, 27, 29);
+}
+
+.skinsNav{
+    margin-bottom: 5vh;
+}
+
+.skinsThresh{
+    display: flex;
+    background: rgb(26,27,29);
+    background: linear-gradient(273deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+}
+
+.skinsLeona{
+    display: flex;
+    background: rgb(26,27,29);
+    background: linear-gradient(90deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+}
+
+.skinsT{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(170,142,50,1);
+    text-shadow: 3px 1px 1px black;
+    font-family: beaufort;
+}
+
+.skinsT{
+    display: flex;
+    align-items: center;
+    color: rgba(170,142,50,1);
+    text-shadow: 3px 1px 1px black;
+    font-family: beaufort;
+}
+
+.skinsT h2{
+    color: #ffc971;
+}
+
+.skinsTdiv h3{
+    font-weight: 100;
+    font-style: italic;
+}
+
+.f-end{
+    justify-content: flex-end;
+}
+
+.f-start{
+    justify-content: flex-start;
+}
+
+.skinsTdiv{
+    text-align: center;
+
+}
+
+.skinsTdivDirection1{
+    transform: rotate(90deg);
+}
+
+.skinsTdivDirection2{
+    transform: rotate(-90deg);
+}
+
+.skinsFooter{
+    width: 100%;
+    height: 5vh;
+    border-top: 1px solid rgba(170, 142, 50, 1);
+    margin-top: 5vh;
+}
+
+.divisor{
+    background-image: url(../img/divisor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 10vh;
+}
+
+/* INDEX PAY */
+
+
+.payBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.payBack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    transition: 0.5s;
+}
+
+.payTitle{
+    margin-top: 5vh;
+}
+
+.payBack:hover{
+    transform: scale(1.2);
+}
+
+.payArticle{
+    padding: 50px;
+    background-image: url(../img/points.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid rgb(165, 12, 12);
+}
+
+.payContainer{
+    background-color: rgba(255, 255, 255, 0.814);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.row{
+    gap: 20px;
+}
+
+.card img{
+    width: 50%;
+    height: 50%;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+.payFooter{
+    width: 100%;
+    height: 10vh;
+    margin-top: 20vh;
+    background-color: rgb(84, 84, 84);
+    border-top: 2px solid red;
+}
+
+.btn{
+    width: 100%;
 }
 
 @media (min-width:1024px) {
@@ -944,7 +1103,7 @@ textarea{
     }
     
     #contactForm{
-        background-image: url(./img/contactformback.jpg);
+        background-image: url(../img/contactformback.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1032,7 +1191,7 @@ textarea{
         "contactForm contactOptions"
         "contactFooter contactFooter";
         grid-template-columns: 8fr 2fr;
-        grid-template-rows: 1fr 6fr 0.5fr;
+        grid-template-rows: 10vh 6fr 0.5fr;
     }
 
 }
