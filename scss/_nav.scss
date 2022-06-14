@@ -1,0 +1,113 @@
+.navWiki {
+    margin-top: 0vh;
+    position: fixed;
+}
+
+.navindex{
+    z-index: 10;
+    position: fixed;
+    height: 10vh;
+}
+
+
+.navSpan{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(26, 27, 29);
+    border-bottom: 2px solid rgb(170, 142, 50);
+
+    .nav_logo{
+        display: flex;
+        width: 10%;
+        height: 60%;
+        background-image: url(../img/logo.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+  
+        &:hover{
+            filter: drop-shadow(0px 0px 10px rgb(170, 142, 50));
+        }
+    }
+
+    .nav_selectors_container{
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+
+        .nav_selectors{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            font-family: beaufort;
+            color: rgb(170, 142, 50);
+            flex-grow: 1;
+
+            a{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                color: rgb(170, 142, 50);
+                text-decoration: none;
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                transition: 0.3s;
+            }
+
+                &:hover{
+                    background-color: rgb(170, 142, 50);
+                    color: rgb(26, 27, 29);
+                }
+        }
+    }
+}
+
+
+@media (min-width:768px) {
+    
+    .navindex{
+        height: 15vh;
+    }
+    
+    .navIcon{
+        display: none;
+    }
+
+    .navSpan{
+        display: flex;
+    }
+}
+
+
+@media (min-width:1024px) {
+    
+    .navindex{
+        height: 15vh;
+    }
+    
+    .navIcon{
+        display: flex;
+    }
+
+    .navSpan{
+        display: flex;
+    }
+
+    .navWiki{
+        margin-top: -15vh;
+        position: fixed;
+    }
+
+}

@@ -1,0 +1,70 @@
+.index_body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+    .index_container{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+    .navindex{
+        z-index: 10;
+        position: fixed;
+        height: 10vh;
+    }
+    
+}
+
+
+#index_video{
+    position: fixed;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.index_play{
+    display: flex;
+    margin: auto;
+    position: fixed;
+    align-self: center;
+    background-color: (26, 27, 29, 1);
+    width: 80%;
+    height: 25%;
+    z-index: 20;
+    background-image: url(../img/logoindex.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 2px solid rgb(170, 142, 50);
+    background-color: rgba(26, 27, 29, 1);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.index_play:hover{
+    animation-name: indexLogo;
+}
+
+
+@media (min-width:768px) {
+    
+    .index_play{
+        width: 50%;
+        height: 30%;
+    }
+
+}
+
+@media (min-width:1024px) {
+    
+    .index_play{
+        width: 40%;
+        height: 30%;
+    }
+}

@@ -1,0 +1,157 @@
+.champselect_back{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26, 27, 29, 0.953);
+    display: flex;
+    flex-direction: column;
+}
+
+#championsGrid{
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    "leonaContainer"
+    "luluContainer"
+    "threshContainer"
+    "sennaContainer";
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+
+    #leonaContainer{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-image: url(../img/leonawr.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        grid-area: leonaContainer;
+    }
+
+    #threshContainer{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url(../img/threshwr.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        grid-area: threshContainer;
+    }
+
+    #luluContainer{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url(../img/luluwr.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        grid-area: luluContainer;
+    }    
+
+    #sennaContainer{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url(../img/sennawr.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        grid-area: sennaContainer;
+    }
+
+
+.champTexts{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &:hover{
+        animation-name: textAppear;
+    }
+
+    .champTextInv{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        height: 75%;
+    }
+
+    .champTextContainer{
+        display: flex;
+        background-color: #fff;
+        width: 100%;
+        height: 25%;
+        justify-content: center;
+        border-top: 2px solid rgb(170, 142, 50);
+        background-color: rgba(26, 27, 29, 0.953);
+        color: rgb(170, 142, 50);
+        font-family: beaufort;
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+        transition: 0.5s;
+    }
+}
+}
+
+
+@media (min-width:1024px) {
+
+    #championsGrid{
+        grid-template-areas: 
+        "leonaContainer luluContainer"
+        "threshContainer sennaContainer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        #leonaContainer{
+            background-position: center;
+            grid-area: leonaContainer;
+        }
+        
+        #threshContainer{
+            background-position: center;
+            grid-area: threshContainer;
+        }
+        
+        #luluContainer{
+            background-position: center;
+            grid-area: luluContainer;
+        }
+        
+        #sennaContainer{
+            background-position: center;
+            grid-area: sennaContainer;
+        }
+    }
+
+
+    .champTexts{
+
+        .champTextContainer{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+

@@ -1,1197 +1,1092 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.navWiki {
+  margin-top: 0vh;
+  position: fixed;
 }
 
-@font-face {
-    font-family: beaufort;
-    src: url(font-face/beaufort.ttf);
+.navindex {
+  z-index: 10;
+  position: fixed;
+  height: 10vh;
 }
 
-/* NAV NAV NAV */
-
-.nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
-    background: rgba(26, 27, 29);
-    border-bottom: 2px solid rgb(170, 142, 50);
+.navSpan {
+  display: none;
 }
 
-.nav_logo{
-    display: flex;
-    width: 10%;
-    height: 60%;
-    background-image: url(../img/logo.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.3s;
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #1a1b1d;
+  border-bottom: 2px solid #aa8e32;
 }
 
-.nav_logo:hover{
-    filter: drop-shadow(0px 0px 10px rgb(170, 142, 50));
+.nav .nav_logo {
+  display: flex;
+  width: 10%;
+  height: 60%;
+  background-image: url(../img/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
 }
 
-.nav_selectors_container{
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 100%;
+.nav .nav_logo:hover {
+  filter: drop-shadow(0px 0px 10px #aa8e32);
 }
 
-.nav_selectors{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    font-family: beaufort;
-    color: rgb(170, 142, 50);
-    flex-grow: 1;
+.nav .nav_selectors_container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 100%;
 }
 
-.nav_selectors a{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    color: rgb(170, 142, 50);
-    text-decoration: none;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    transition: 0.3s;
+.nav .nav_selectors_container .nav_selectors {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-family: beaufort;
+  color: #aa8e32;
+  flex-grow: 1;
 }
 
-.nav_selectors a:hover{
-    background-color: rgb(170, 142, 50);
-    color: rgba(26, 27, 29);
+.nav .nav_selectors_container .nav_selectors a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #aa8e32;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
-/* WIKI INDEX */
-
-.wikiback{
-    background-image: url(../img/back.jpg);
-    background-size: 40%;
+.nav .nav_selectors_container .nav_selectors:hover {
+  background-color: #aa8e32;
+  color: #1a1b1d;
 }
 
-#wikiScroll{
-    scroll-behavior: smooth;
-}
-
-.article_text p, .article_text li {
-    font-size: 20px;
-    line-height: 30px
-}
-
-.navWiki{
-    margin-top: 0vh;
-    position: fixed;
-}
-
-.aside{
+@media (min-width: 768px) {
+  .navindex {
+    height: 15vh;
+  }
+  .navIcon {
     display: none;
-}
-
-.article{
-    margin-top: 0vh;
+  }
+  .navSpan {
     display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    width: 100vw;
-    height: 100%;
-    font-family: 'Space Grotesk', sans-serif;
-    color: white;
-    background-color: rgba(26, 27, 29);
-    border-radius: 0;
+  }
 }
 
-.group{
+@media (min-width: 1024px) {
+  .navindex {
+    height: 15vh;
+  }
+  .navIcon {
     display: flex;
-    flex-direction: column;
-    margin: 5vh;
-    margin-bottom: 0vh;
-}
-
-.a_yellow{
-    color: #ffc971;
-    font-weight: bold;
-    text-decoration-line: none;
-    transition: 0.2s;
-}
-
-.a_yellow:hover{
-    text-decoration-line:underline;
-    color: rgb(255, 224, 172);
-    
-}
-
-.group h1{
-    font-size: 2.5rem;
-    width: 100%;
-    border-bottom: 1px solid rgb(170, 170, 170);
-    line-height: 50px;
-}
-
-#h1title{
-    font-size: 3rem;
-    border-bottom: 0px solid white;
-}
-
-.content{
-    background-color: rgb(60, 62, 65);
+  }
+  .navSpan {
     display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    border: 1px solid rgb(255, 255, 255);
-    width: 330px;
-    height: 350px;
+  }
+  .navWiki {
+    margin-top: -15vh;
+    position: fixed;
+  }
 }
 
-.content_title{
-    display: flex;
-    width: 100%;
-    height: 15%;
-    justify-content: flex-start;
-    align-items: center;
+#wikiScroll {
+  scroll-behavior: smooth;
 }
 
-.content_title h2{
-    margin: 0;
-    padding-left: 5%;
-    border-bottom: 1px solid white;
-    width: 100%;
-    line-height: 1.5em;
+#h1title {
+  font-size: 3rem;
+  border-bottom: 0px solid white;
 }
 
-.content_subtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    height: 85%;
+.wikiback {
+  background-image: url(../img/back.jpg);
+  background-size: 40%;
 }
 
-.content_subtitle ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 95%;
-    margin: 0;
-    padding: 0;
+.article_text p {
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.content_subtitle li {
-    width: 100%;
-    height: 100%;
+.article_text li {
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.content_subtitle li a {
-    display: inline-block;
-    border-radius: 5px;
-    color: white;
-    text-decoration-line: none;
-    width: 100%;
-    transition: 0.3s
+.aside {
+  display: none;
 }
 
-.content_subtitle li a:hover {
-    background-color: rgb(170, 142, 50);
+.article {
+  margin-top: 0vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  width: 100vw;
+  height: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  background-color: #1a1b1d;
+  border-radius: 0;
 }
 
-.wikiSpan{
-    font-style: italic;
-    color: rgb(158, 158, 158);
+.article .group {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh;
+  margin-bottom: 0vh;
+}
+
+.article .group h1 {
+  font-size: 2.5rem;
+  width: 100%;
+  border-bottom: 1px solid #aaaaaa;
+  line-height: 50px;
+}
+
+.article .group .content {
+  background-color: #3c3e41;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid white;
+  width: 330px;
+  height: 350px;
+}
+
+.article .group .content .content_title {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.article .group .content .content_title h2 {
+  margin: 0;
+  padding-left: 5%;
+  border-bottom: 1px solid white;
+  width: 100%;
+  line-height: 1.5em;
+}
+
+.article .group .content .content_subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 85%;
+}
+
+.article .group .content .content_subtitle ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+.article .group .content .content_subtitle ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.article .group .content .content_subtitle ul li a {
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  text-decoration-line: none;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.article .group .content .content_subtitle ul li a:hover {
+  background-color: #aa8e32;
+}
+
+.a_yellow {
+  color: #ffc971;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: 0.2s;
+}
+
+.a_yellow:hover {
+  text-decoration-line: underline;
+  color: #ffe0ac;
+}
+
+.wikiSpan {
+  font-style: italic;
+  color: #9e9e9e;
 }
 
 .ad {
-    color: rgb(255, 136, 0);
+  color: #ff8800;
 }
 
 .adcritchance {
-    color: rgb(255, 115, 0);
+  color: #ff7300;
 }
 
 .adcritdmg {
-    color: rgb(253, 110, 53);
+  color: #fd6e35;
 }
 
 .ap {
-    color: rgb(160, 160, 255);
+  color: #a0a0ff;
 }
 
 .man {
-    color: rgb(92, 133, 199);
+  color: #5c85c7;
 }
 
 .hp {
-    color: rgb(89, 200, 85);
+  color: #59c855;
 }
 
 .armor {
-    color: rgb(251, 255, 0);
+  color: #fbff00;
 }
 
 .mr {
-    color: rgb(255, 0, 149);
+  color: #ff0095;
 }
 
 .eng {
-    color: rgb(238, 240, 120);
+  color: #eef078;
 }
 
-/* CHAMPIONS INDEX */
-
-.champselect_back{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(26, 27, 29, 0.953);
+@media (min-width: 1024px) {
+  .article {
+    display: flex;
+    margin-top: 15vh;
+    flex-direction: column;
+    margin-left: 23%;
+    width: 75%;
+    height: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    background-color: #1a1b1d;
+    border-radius: 20px;
+  }
+  .article_text p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .article_text li {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .aside {
+    margin-left: 2vw;
+    display: flex;
+    position: fixed;
+    width: 20%;
+    height: 80vh;
+    background-color: #1a1b1d;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    border-radius: 20px;
+  }
+  .aside .aside_container {
     display: flex;
     flex-direction: column;
-}
-
-#championsGrid{
-    display: grid;
-    gap: 5px;
     width: 100%;
     height: 100%;
-    grid-template-areas: 
-    "leonaContainer"
-    "luluContainer"
-    "threshContainer"
-    "sennaContainer";
-    grid-template-columns: 100%;
-    grid-template-rows: 25% 25% 25% 25%;
-}
-
-#leonaContainer{
+  }
+  .aside .aside_container .aside_item {
     display: flex;
-    text-decoration: none;
     flex-direction: column;
-    justify-content: flex-end;
+    width: 100%;
+    height: 11.1%;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    background-image: url(../img/leonawr.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    align-content: center;
+    justify-self: center;
+    border: 1px solid #aa8e32;
+  }
+  .aside .aside_container .aside_item a {
+    display: flex;
+    color: white;
+    text-decoration-line: none;
+    text-align: center;
     width: 100%;
     height: 100%;
-    grid-area: leonaContainer;
-}
-
-#threshContainer{
-    display: flex;
-    text-decoration: none;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url(../img/threshwr.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    grid-area: threshContainer;
-}
-
-#luluContainer{
-    display: flex;
-    text-decoration: none;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url(../img/luluwr.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    grid-area: luluContainer;
-}
-
-#sennaContainer{
-    display: flex;
-    text-decoration: none;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url(../img/sennawr.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    grid-area: sennaContainer;
-}
-
-.champTexts{
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.champTexts:hover{
-    animation-name: textAppear;
-}
-
-.champTextInv{
-    display: flex;
-    background-color: rgba(255, 255, 255, 0);
-    width: 100%;
-    height: 75%;
-}
-
-.champTextContainer{
-    display: flex;
-    background-color: #fff;
-    width: 100%;
-    height: 25%;
+    transition: 0.3s;
+    font-size: 20px;
+    letter-spacing: 2px;
     justify-content: center;
-    border-top: 2px solid rgb(170, 142, 50);
-    background-color: rgba(26, 27, 29, 0.953);
-    color: rgb(170, 142, 50);
-    font-family: beaufort;
-    font-size: 1rem;
-    letter-spacing: 5px;
-    transition: 0.5s;
-}
-
-/* INDEX INDEX */
-
-.index_body{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-}
-
-.index_container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-
-.navindex{
-    z-index: 10;
-    position: fixed;
-    height: 10vh;
-}
-
-.navSpan{
-    display: none;
-}
-
-#index_video{
-    position: fixed;
-    z-index: 1;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.index_play{
-    display: flex;
-    margin: auto;
-    position: fixed;
-    align-self: center;
-    background-color: rgba(26, 27, 29, 1);
-    width: 80%;
-    height: 25%;
-    z-index: 20;
-    background-image: url(../img/logoindex.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid rgb(170, 142, 50);
+    align-items: center;
+  }
+  .aside .aside_container .aside_item a:hover {
+    background-color: #aa8e32;
+  }
+  .aside .aside_container #aside_title {
+    border: 0px solid #aa8e32;
+    text-align: center;
+  }
+  .aside .aside_container #aside_item_bot {
     border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    border-bottom-right-radius: 20px;
+  }
 }
 
-.index_play:hover{
-    animation-name: indexLogo;
+.champselect_back {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(26, 27, 29, 0.953);
+  display: flex;
+  flex-direction: column;
 }
 
-/* DISCOVER INDEX  */
-
-.discover_body{
-    background-color: rgb(26, 27, 29);
+#championsGrid {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "leonaContainer" "luluContainer" "threshContainer" "sennaContainer";
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 25% 25% 25%;
 }
 
-.discoverDemaciaContainer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/demaciaback.jpg);
+#championsGrid #leonaContainer {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(../img/leonawr.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: leonaContainer;
+}
+
+#championsGrid #threshContainer {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../img/threshwr.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: threshContainer;
+}
+
+#championsGrid #luluContainer {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../img/luluwr.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: luluContainer;
+}
+
+#championsGrid #sennaContainer {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../img/sennawr.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  grid-area: sennaContainer;
+}
+
+#championsGrid .champTexts {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#championsGrid .champTexts:hover {
+  animation-name: textAppear;
+}
+
+#championsGrid .champTexts .champTextInv {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 75%;
+}
+
+#championsGrid .champTexts .champTextContainer {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+  border-top: 2px solid #aa8e32;
+  background-color: rgba(26, 27, 29, 0.953);
+  color: #aa8e32;
+  font-family: beaufort;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  transition: 0.5s;
+}
+
+@media (min-width: 1024px) {
+  #championsGrid {
+    grid-template-areas: "leonaContainer luluContainer" "threshContainer sennaContainer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #championsGrid #leonaContainer {
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 5vh;
-}
-
-.discoverNoxusContainer{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/noxusback.jpg);
+    grid-area: leonaContainer;
+  }
+  #championsGrid #threshContainer {
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 5vh;
-}
-
-.discoverFreljordContainer{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/freljordback.jpg);
+    grid-area: threshContainer;
+  }
+  #championsGrid #luluContainer {
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 5vh;
-}
-
-.discoverPiltoverContainer{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/piltoverback.jpg);
+    grid-area: luluContainer;
+  }
+  #championsGrid #sennaContainer {
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-area: sennaContainer;
+  }
+  .champTexts .champTextContainer {
+    font-size: 1.4rem;
+  }
 }
 
-.discoverTop{
-    display: flex;
-    justify-content: center;
-    height: 60%;
-    width: 100%;
+.index_body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
-.discoverTop img:hover{
+.index_body .index_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.index_body .navindex {
+  z-index: 10;
+  position: fixed;
+  height: 10vh;
+}
+
+#index_video {
+  position: fixed;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.index_play {
+  display: flex;
+  margin: auto;
+  position: fixed;
+  align-self: center;
+  background-color: 26, 27, 29, 1;
+  width: 80%;
+  height: 25%;
+  z-index: 20;
+  background-image: url(../img/logoindex.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid #aa8e32;
+  background-color: #1a1b1d;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.index_play:hover {
+  animation-name: indexLogo;
+}
+
+@media (min-width: 768px) {
+  .index_play {
+    width: 50%;
+    height: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .index_play {
+    width: 40%;
+    height: 30%;
+  }
+}
+
+/* DISCOVER */
+.discover_body {
+  background-color: #1d1a1a;
+}
+
+.discoverContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5vh;
+}
+
+.discoverContainer .discoverTop {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+}
+
+.discoverContainer .discoverTop:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.discoverContainer .discoverBot {
+  background: linear-gradient(0deg, rgba(26, 27, 29, 0.540004) 0%, 26, 27, 29, 1 76%);
+  border-top: 1px solid #aa8e32;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40%;
+  width: 100%;
+  color: #bdac8b;
+  font-family: beaufort;
+  letter-spacing: 1px;
+}
+
+.discoverContainer .discoverBot h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.discoverContainer .discoverBot .discoverBotTitle {
+  display: flex;
+}
+
+.discoverContainer .discoverBot .discoverBotText {
+  display: flex;
+  width: 80%;
+}
+
+.discoverDemaciaContainer {
+  background-image: url(../img/demaciaback.jpg);
+}
+
+.discoverNoxusContainer {
+  background-image: url(../img/noxusback.jpg);
+}
+
+.discoverFreljordContainer {
+  background-image: url(../img/freljordback.jpg);
+}
+
+.discoverPiltoverContainer {
+  background-image: url(../img/piltoverback.jpg);
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .discoverContainer .discoverTop {
+    height: 70%;
+  }
+  .discoverContainer .discoverBot {
+    height: 30%;
+    letter-spacing: 2px;
+  }
+  .discoverContainer .discoverBot .discoverBotText {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .discoverContainer .discoverTop {
+    height: 75%;
+  }
+  .discoverContainer .discoverTop:hover {
     transform: scale(1.2);
     transition: 1s;
-}
-
-.discoverBot{
-    background: linear-gradient(0deg, rgba(26,27,29,0.5400035014005602) 0%, rgba(26,27,29,1) 76%);
-    border-top: 1px solid rgb(170, 142, 50);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 40%;
+  }
+  .discoverContainer .discoverBot {
+    height: 25%;
     width: 100%;
-    color: rgb(189, 172, 139);
-    font-family: beaufort;
-    letter-spacing: 1px;
-}
-
-.discoverBot h2{
-    margin: 0;
-    padding: 0;
-}
-
-.discoverBotTitle{
-    display: flex;
-}
-
-.discoverBotText{
-    display: flex;
+    letter-spacing: 2px;
+  }
+  .discoverContainer .discoverBot .discoverBotText {
     width: 80%;
+  }
 }
 
-/* CONTACT INDEX */
-
-.contact_body{
-    background-color: rgb(26, 27, 29);
-    width: 100%;
-    height: 100%;
+.contact_body {
+  background-color: #1a1b1d;
+  width: 100%;
+  height: 100%;
 }
 
-#contactNav{
-    display: flex;
+#contactNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #1a1b1d;
+  border-bottom: 2px solid #aa8e32;
+  grid-area: contactNav;
+}
+
+#contactForm {
+  background-image: url(../img/contactformback.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: contactForm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contactForm .contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1b1d;
+  border: 1px solid #aa8e32;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+}
+
+#contactForm .contactFormContainer .contactFormTitle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  background-color: #1a1b1d;
+  color: #aa8e32;
+  font-family: beaufort;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #aa8e32;
+}
+
+#contactForm .contactFormContainer .contactFormForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea {
+  display: flex;
+  width: 80%;
+  height: 60%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea {
+  resize: none;
+  width: 100%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input {
+  width: 50%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  border-right: 1px solid #aa8e32;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsImg {
+  display: none;
+  background-image: url(../img/contactteemo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsImg:hover {
+  background-image: url(../img/contactteemo2.png);
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input {
+  width: 70%;
+}
+
+#contactOptions {
+  display: flex;
+  flex-direction: column;
+  grid-area: contactOptions;
+}
+
+#contactOptions .contactOptionsAnchors {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#contactOptions .contactOptionsAnchors .contactOptionsA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background-color: #1a1b1d;
+}
+
+#contactOptions .contactOptionsAnchors .contactOptionsA a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: beaufort;
+  color: #aa8e32;
+  font-size: 1.4rem;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+}
+
+#contactOptions .contactOptionsAnchors .contactOptionsA a:hover {
+  background-color: #aa8e32;
+  color: #1a1b1d;
+}
+
+#contactOptions .contactOptionsAnchors p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #423f3f;
+  align-items: center;
+  font-family: beaufort;
+  color: #f5f1e2;
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+}
+
+#contactFooter {
+  background-color: #1a1b1d;
+  grid-area: contactFooter;
+  border-top: 2px solid #aa8e32;
+}
+
+#contactGrid {
+  background-color: #345071;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "contactNav contactNav"  "contactForm contactForm" "contactOptions contactOptions";
+  grid-template-columns: 8fr 2fr;
+  grid-template-rows: 1fr 6fr 0.5fr;
+}
+
+@media (min-width: 1024px) {
+  #contactForm .contactFormContainer .contactFormForm {
     flex-direction: row;
-    align-items: center;
-    background: rgb(26, 27, 29);
-    border-bottom: 2px solid rgb(170, 142, 50);
-    grid-area: contactNav;
-}
-
-#contactForm{
-    background-image: url(../img/contactformback.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: contactForm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contactFormContainer{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(26, 27, 29);
-    border: 1px solid rgb(170, 142, 50);
-    border-radius: 5px;
-    width: 80%;
-    height: 80%;
-}
-
-.contactFormTitle{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 15%;
-    background-color: rgb(26, 27, 29);
-    color: rgb(170, 142, 50);
-    font-family: beaufort;
-    font-size: 1.6rem;
-    border-bottom: 1px solid rgb(170, 142, 50)
-}
-
-.contactFormForm{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 85%;
-}
-
-.contactFormInputs{
-    display: flex;
-    height: 50%;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    border-right: 1px solid rgb(170, 142, 50)
-}
-
-.contactFormInputsInputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 60%;
-}
-.contactFormInputsInputs input{
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText {
     width: 70%;
-}
-
-.contactFormInputsImg{
-    display:none;
-    background-image: url(../img/contactteemo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 40%;
-    transition: 0.5s;
-}
-
-.contactFormInputsImg:hover{
-    background-image: url(../img/contactteemo2.png);
-}
-
-textarea{
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea {
+    width: 80%;
+    height: 60%;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea {
     resize: none;
     width: 100%;
-}
-
-.contactFormText{
-    display: flex;
-    flex-direction: column;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput {
     width: 100%;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contactFormTextArea{
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input {
+    width: 50%;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs {
+    height: 100%;
+    width: 30%;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsImg {
     display: flex;
-    width: 80%;
-    height: 60%;
-}
-
-.contactFormTextInput{
-    display: flex;
-    justify-content: center;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsImg:hover {
+    background-image: url(../img/contactteemo2.png);
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs {
     width: 100%;
-}
-
-.contactFormTextInput input{
-    width: 50%
-}
-
-#contactOptions{
+    height: 40%;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input {
+    width: 50%;
+  }
+  #contactOptions {
     display: flex;
     flex-direction: column;
     grid-area: contactOptions;
-}
-
-.contactOptionsAnchors{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.contactOptionsA{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 20%;
-    background-color:rgb(26, 27, 29);
-}
-
-.contactOptionsA p{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: rgb(66, 63, 63);
-    align-items: center;
-    font-family: beaufort;
-    color: rgb(245, 241, 226);
-    font-size: 1.4rem;
-    width: 100%;
-    height: 100%;
-}
-
-.contactOptionsA a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: beaufort;
-    color: rgb(170, 142, 50);
-    font-size: 1.4rem;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    transition: 0.2s;
-}
-
-.contactOptionsAnimation a:hover{
-    background-color: rgb(170, 142, 50);
-    color: rgba(26, 27, 29);
-}
-
-#contactFooter{
-    background-color: rgb(26, 27, 29);
-    grid-area: contactFooter;
-    border-top: 2px solid rgb(170, 142, 50);
-}
-
-#contactGrid{
-    background-color: rgb(52, 80, 113);
+  }
+  #contactGrid {
+    background-color: #345071;
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-areas:
-    "contactNav contactNav" 
-    "contactForm contactForm"
-    "contactOptions contactOptions";
+    grid-template-areas: "contactNav contactNav"  "contactForm contactOptions" "contactFooter contactFooter";
     grid-template-columns: 8fr 2fr;
-    grid-template-rows: 1fr 6fr 0.5fr;
+    grid-template-rows: 10vh 6fr 0.5fr;
+  }
 }
 
-@keyframes textAppear{
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }    
+.payBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@keyframes indexLogo{
-    0% {
-        transform: scale(1);
-    }
-
-    10% {
-        transform: scale(1.1);
-    }
-
-    20% {
-        transform: scale(1.0);
-        background-color: rgba(26, 27, 29, 1);
-        border: 2px solid rgba(170, 142, 50, 1);
-    }
-
-    100% {
-        transform: scale(1.5);
-        background-color: rgba(26, 27, 29, 0);
-        border: 2px solid rgba(170, 142, 50, 0);
-    }    
+.payBody .payBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  transition: 0.5s;
 }
 
-@media (min-width:768px) {
-    /* INDEX */
-    
-    .navindex{
-        height: 15vh;
-    }
-    
-    .navIcon{
-        display: none;
-    }
-
-    .navSpan{
-        display: flex;
-    }
-
-    .index_play{
-        width: 50%;
-        height: 30%;
-    }
-
-    /* DISCOVER INDEX */
-
-    .discoverTop{
-        height: 70%;
-    }
-
-    .discoverBot{
-        height: 30%;
-        letter-spacing: 2px;
-    }
-
-    .discoverBotText{
-        width: 90%;
-    }
+.payBody .payBack:hover {
+  transform: scale(1.2);
 }
 
-
-#skinsBody{
-    background-color: rgb(26, 27, 29);
+.payBody .payTitle {
+  margin-top: 5vh;
 }
 
-.skinsNav{
-    margin-bottom: 5vh;
+.payBody .payArticle {
+  padding: 50px;
+  background-image: url(../img/points.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #a50c0c;
 }
 
-.skinsThresh{
-    display: flex;
-    background: rgb(26,27,29);
-    background: linear-gradient(273deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+.payBody .payArticle .payContainer {
+  background-color: rgba(255, 255, 255, 0.814);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
 }
 
-.skinsLeona{
-    display: flex;
-    background: rgb(26,27,29);
-    background: linear-gradient(90deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+.payBody .payArticle .payContainer .row {
+  gap: 20px;
 }
 
-.skinsT{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: rgba(170,142,50,1);
-    text-shadow: 3px 1px 1px black;
-    font-family: beaufort;
+.payBody .payArticle .payContainer .row .card img {
+  width: 50%;
+  height: 50%;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
 }
 
-.skinsT{
-    display: flex;
-    align-items: center;
-    color: rgba(170,142,50,1);
-    text-shadow: 3px 1px 1px black;
-    font-family: beaufort;
+.payBody .payFooter {
+  width: 100%;
+  height: 10vh;
+  margin-top: 20vh;
+  background-color: #545454;
+  border-top: 2px solid red;
 }
 
-.skinsT h2{
-    color: #ffc971;
+.btn {
+  width: 100%;
 }
 
-.skinsTdiv h3{
-    font-weight: 100;
-    font-style: italic;
+#skinsBody {
+  background-color: #1a1b1d;
 }
 
-.f-end{
-    justify-content: flex-end;
+.skinsNav {
+  margin-bottom: 5vh;
 }
 
-.f-start{
-    justify-content: flex-start;
+.skinsThresh {
+  display: flex;
+  background: #1a1b1d;
+  background: linear-gradient(273deg, #1a1b1d 6%, #aa8e32 95%);
 }
 
-.skinsTdiv{
-    text-align: center;
-
+.skinsLeona {
+  display: flex;
+  background: #1a1b1d;
+  background: linear-gradient(90deg, #1a1b1d 6%, #aa8e32 95%);
 }
 
-.skinsTdivDirection1{
-    transform: rotate(90deg);
+.skinsT {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #aa8e32;
+  text-shadow: 3px 1px 1px black;
+  font-family: beaufort;
 }
 
-.skinsTdivDirection2{
-    transform: rotate(-90deg);
+.skinsT {
+  display: flex;
+  align-items: center;
+  color: #aa8e32;
+  text-shadow: 3px 1px 1px black;
+  font-family: beaufort;
 }
 
-.skinsFooter{
-    width: 100%;
-    height: 5vh;
-    border-top: 1px solid rgba(170, 142, 50, 1);
-    margin-top: 5vh;
+.skinsT h2 {
+  color: #ffc971;
 }
 
-.divisor{
-    background-image: url(../img/divisor.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 10vh;
+.skinsTdiv h3 {
+  font-weight: 100;
+  font-style: italic;
 }
 
-/* INDEX PAY */
-
-
-.payBody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+.f-end {
+  justify-content: flex-end;
 }
 
-.payBack{
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 3rem;
-    margin-top: 5vh;
-    margin-left: 5vh;
-    transition: 0.5s;
+.f-start {
+  justify-content: flex-start;
 }
 
-.payTitle{
-    margin-top: 5vh;
+.skinsTdiv {
+  text-align: center;
 }
 
-.payBack:hover{
-    transform: scale(1.2);
+.skinsTdivDirection1 {
+  transform: rotate(90deg);
 }
 
-.payArticle{
-    padding: 50px;
-    background-image: url(../img/points.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 2px solid rgb(165, 12, 12);
+.skinsTdivDirection2 {
+  transform: rotate(-90deg);
 }
 
-.payContainer{
-    background-color: rgba(255, 255, 255, 0.814);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    gap: 20px;
+.skinsFooter {
+  width: 100%;
+  height: 5vh;
+  border-top: 1px solid #aa8e32;
+  margin-top: 5vh;
 }
 
-.row{
-    gap: 20px;
+.divisor {
+  background-image: url(../img/divisor.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 10vh;
 }
 
-.card img{
-    width: 50%;
-    height: 50%;
-    justify-items: center;
-    align-items: center;
-    margin: auto;
+@font-face {
+  font-family: beaufort;
+  src: url(font-face/beaufort.ttf);
 }
 
-.payFooter{
-    width: 100%;
-    height: 10vh;
-    margin-top: 20vh;
-    background-color: rgb(84, 84, 84);
-    border-top: 2px solid red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.btn{
-    width: 100%;
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@media (min-width:1024px) {
-    .gamemodes_body{
-        background-color: rgb(26, 27, 29);
-        color: white;
-    }
-
-    /* INDEX */
-    
-    .navindex{
-        height: 15vh;
-    }
-    
-    .navIcon{
-        display: flex;
-    }
-
-    .navSpan{
-        display: flex;
-    }
-
-    .index_play{
-        width: 40%;
-        height: 30%;
-    }
-
-    /* DISCOVER INDEX */
-
-    .discoverTop{
-        height: 75%;
-    }
-
-    .discoverBot{
-        height: 25%;
-        width: 100%;
-        letter-spacing: 2px;
-    }
-
-    .discoverBotText{
-        width: 80%;
-    }
-
-    /* WIKI INDEX */
-    
-    .navWiki{
-        margin-top: -15vh;
-        position: fixed;
-    }
-
-    .article_text p, .article_text li {
-        font-size: 20px;
-        line-height: 40px
-    }
-    
-    .aside{
-        margin-left: 2vw;
-        display: flex;
-        position: fixed;
-        width: 20%;
-        height: 80vh;
-        background-color: rgba(26, 27, 29);
-        font-family: 'Space Grotesk', sans-serif;
-        color: white;
-        border-radius: 20px;
-    }
-    
-    .aside_container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-    
-    #aside_title{
-        border: 0px solid rgb(170, 142, 50);
-        text-align: center;
-    }
-    
-    .aside_item{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 11.1%;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
-        justify-self: center;
-        border: 1px solid rgb(170, 142, 50);
-    }
-    
-    #aside_item_bot{
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-    
-    .aside_item a{
-        display: flex;
-        color: white;
-        text-decoration-line: none;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        transition: 0.3s;
-        font-size: 20px;
-        letter-spacing: 2px;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .aside_item a:hover{
-        background-color: rgb(170, 142, 50);
-    }
-
-    .article{
-        display: flex;
-        margin-top: 15vh;
-        flex-direction: column;
-        margin-left: 23%;
-        width: 75%;
-        height: 100%;
-        font-family: 'Space Grotesk', sans-serif;
-        color: white;
-        background-color: rgba(26, 27, 29);
-        border-radius: 20px;
-    }
-
-    /* CHAMPIONS INDEX */
-
-    #championsGrid{
-        grid-template-areas: 
-        "leonaContainer luluContainer"
-        "threshContainer sennaContainer";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    
-    #leonaContainer{
-        background-position: center;
-        grid-area: leonaContainer;
-    }
-    
-    #threshContainer{
-        background-position: center;
-        grid-area: threshContainer;
-    }
-    
-    #luluContainer{
-        background-position: center;
-        grid-area: luluContainer;
-    }
-    
-    #sennaContainer{
-        background-position: center;
-        grid-area: sennaContainer;
-    }
-    
-    .champTextContainer{
-        font-size: 1.4rem;
-    }
-
-    /* CONTACT INDEX */
-    
-    .contact_body{
-        background-color: rgb(26, 27, 29);
-        width: 100%;
-        height: 100%;
-    }
-    
-    #contactNav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background: rgb(26, 27, 29);
-        border-bottom: 2px solid rgb(170, 142, 50);
-        grid-area: contactNav;
-    }
-    
-    #contactForm{
-        background-image: url(../img/contactformback.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        grid-area: contactForm;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .contactFormContainer{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(26, 27, 29);
-        border: 1px solid rgb(170, 142, 50);
-        border-radius: 5px;
-        width: 80%;
-        height: 80%;
-    }
-    
-    .contactFormTitle{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 15%;
-        background-color: rgb(26, 27, 29);
-        color: rgb(170, 142, 50);
-        font-family: beaufort;
-        font-size: 1.6rem;
-        border-bottom: 1px solid rgb(170, 142, 50)
-    }
-    
-    .contactFormForm{
-        flex-direction: row;
-    }
-    
-    .contactFormInputs{
-        height: 100%;
-        width: 30%;
-    }
-    
-    .contactFormInputsInputs{
-        width: 100%;
-        height: 40%;
-    }
-    .contactFormInputsInputs input{
-        width: 70%;
-    }
-    
-    .contactFormInputsImg{
-        display: flex;
-    }
-    
-    .contactFormText{
-        width: 70%;
-    }
-    
-    .contactFormTextArea{
-        width: 80%;
-        height: 60%;
-    }
-    
-    .contactFormTextInput{
-        width: 100%;
-    }
-    
-    .contactFormTextInput input{
-        width: 50%
-    }
-    
-    #contactOptions{
-        display: flex;
-        flex-direction: column;
-        grid-area: contactOptions;
-    }
-    
-    #contactGrid{
-        background-color: rgb(52, 80, 113);
-        height: 100vh;
-        width: 100vw;
-        display: grid;
-        grid-template-areas:
-        "contactNav contactNav" 
-        "contactForm contactOptions"
-        "contactFooter contactFooter";
-        grid-template-columns: 8fr 2fr;
-        grid-template-rows: 10vh 6fr 0.5fr;
-    }
-
+@keyframes indexLogo {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+    background-color: #1a1b1d;
+    border: 2px solid #aa8e32;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: rgba(26, 27, 29, 0);
+    border: 2px solid rgba(170, 142, 50, 0);
+  }
 }
+/*# sourceMappingURL=style.css.map */

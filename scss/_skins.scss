@@ -1,0 +1,82 @@
+#skinsBody{
+    background-color: rgb(26, 27, 29);
+}
+
+.skinsNav{
+    margin-bottom: 5vh;
+}
+
+.skinsThresh{
+    display: flex;
+    background: rgb(26,27,29);
+    background: linear-gradient(273deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+}
+
+.skinsLeona{
+    display: flex;
+    background: rgb(26,27,29);
+    background: linear-gradient(90deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
+}
+
+.skinsT{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(170,142,50,1);
+    text-shadow: 3px 1px 1px black;
+    font-family: beaufort;
+}
+
+.skinsT{
+    display: flex;
+    align-items: center;
+    color: rgba(170,142,50,1);
+    text-shadow: 3px 1px 1px black;
+    font-family: beaufort;
+}
+
+.skinsT h2{
+    color: #ffc971;
+}
+
+.skinsTdiv h3{
+    font-weight: 100;
+    font-style: italic;
+}
+
+.f-end{
+    justify-content: flex-end;
+}
+
+.f-start{
+    justify-content: flex-start;
+}
+
+.skinsTdiv{
+    text-align: center;
+
+}
+
+.skinsTdivDirection1{
+    transform: rotate(90deg);
+}
+
+.skinsTdivDirection2{
+    transform: rotate(-90deg);
+}
+
+.skinsFooter{
+    width: 100%;
+    height: 5vh;
+    border-top: 1px solid rgba(170, 142, 50, 1);
+    margin-top: 5vh;
+}
+
+.divisor{
+    background-image: url(../img/divisor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 10vh;
+}

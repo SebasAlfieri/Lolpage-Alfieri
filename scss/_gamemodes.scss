@@ -1,0 +1,126 @@
+/* DISCOVER */
+
+.discover_body{
+    background-color: rgb(29, 26, 26);
+}
+
+.discoverContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5vh;
+    
+        .discoverTop{
+            display: flex;
+            justify-content: center;
+            height: 60%;
+            width: 100%;
+
+            &:hover{
+                transform: scale(1.2);
+                transition: 1s;
+            }
+        }
+
+        .discoverBot{
+            background: linear-gradient(0deg, rgba(26,27,29,0.5400035014005602) 0%, (26,27,29,1) 76%);
+            border-top: 1px solid rgb(170, 142, 50);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 40%;
+            width: 100%;
+            color: rgb(189, 172, 139);
+            font-family: beaufort;
+            letter-spacing: 1px;
+
+                h2{
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .discoverBotTitle{
+                    display: flex;
+                }
+                
+                .discoverBotText{
+                    display: flex;
+                    width: 80%;
+                }
+        }
+}
+
+.discoverDemaciaContainer{
+    background-image: url(../img/demaciaback.jpg);
+
+}
+
+.discoverNoxusContainer{
+    background-image: url(../img/noxusback.jpg);
+}
+
+.discoverFreljordContainer{
+    background-image: url(../img/freljordback.jpg);
+
+}
+
+.discoverPiltoverContainer{
+    background-image: url(../img/piltoverback.jpg);
+    margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+
+    .discoverContainer{
+        
+        .discoverTop{
+            height: 70%;
+        }
+
+        .discoverBot{
+            height: 30%;
+            letter-spacing: 2px;
+
+            .discoverBotText{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+
+    .discoverContainer{
+
+        .discoverTop{
+            height: 75%;
+
+            &:hover{
+                transform: scale(1.2);
+                transition: 1s;
+            }
+        }
+
+        .discoverBot{
+            height: 25%;
+            width: 100%;
+            letter-spacing: 2px;
+
+            .discoverBotText{
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+
+
+
+

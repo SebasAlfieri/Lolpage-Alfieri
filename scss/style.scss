@@ -1,0 +1,53 @@
+@import "nav";
+@import "wiki";
+@import "champs";
+@import "index";
+@import "gamemodes";
+@import "contact";
+@import "pay";
+@import "skins";
+
+@font-face {
+    font-family: beaufort;
+    src: url(font-face/beaufort.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@keyframes textAppear{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }    
+}
+
+@keyframes indexLogo{
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.1);
+    }
+
+    20% {
+        transform: scale(1.0);
+        background-color: rgba(26, 27, 29, 1);
+        border: 2px solid rgba(170, 142, 50, 1);
+    }
+
+    100% {
+        transform: scale(1.5);
+        background-color: rgba(26, 27, 29, 0);
+        border: 2px solid rgba(170, 142, 50, 0);
+    }    
+}
+

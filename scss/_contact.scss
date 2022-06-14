@@ -1,0 +1,284 @@
+.contact_body{
+    background-color: rgb(26, 27, 29);
+    width: 100%;
+    height: 100%;
+}
+
+#contactNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(26, 27, 29);
+    border-bottom: 2px solid rgb(170, 142, 50);
+    grid-area: contactNav;
+}
+
+#contactForm{
+    background-image: url(../img/contactformback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: contactForm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contactFormContainer{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(26, 27, 29);
+        border: 1px solid rgb(170, 142, 50);
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+
+        .contactFormTitle{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 15%;
+            background-color: rgb(26, 27, 29);
+            color: rgb(170, 142, 50);
+            font-family: beaufort;
+            font-size: 1.6rem;
+            border-bottom: 1px solid rgb(170, 142, 50)
+        }
+
+        
+        .contactFormForm{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 85%;
+
+            .contactFormText{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+
+                .contactFormTextArea{
+                    display: flex;
+                    width: 80%;
+                    height: 60%;
+
+                    textarea{
+                        resize: none;
+                        width: 100%;
+                    }
+                }
+
+                .contactFormTextInput{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+
+                    input{
+                        width: 50%
+                    }
+                }
+            }
+
+            .contactFormInputs{
+                display: flex;
+                height: 50%;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                border-right: 1px solid rgb(170, 142, 50);
+
+                .contactFormInputsImg{
+                    display:none;
+                    background-image: url(../img/contactteemo.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100%;
+                    height: 40%;
+                    transition: 0.5s;
+
+
+
+                    &:hover{
+                        background-image: url(../img/contactteemo2.png);
+                    }
+                }
+
+                .contactFormInputsInputs{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 60%;
+
+                    input{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    
+}
+
+
+#contactOptions{
+    display: flex;
+    flex-direction: column;
+    grid-area: contactOptions;
+
+    .contactOptionsAnchors{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        .contactOptionsA{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            background-color:rgb(26, 27, 29);
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: beaufort;
+                color: rgb(170, 142, 50);
+                font-size: 1.4rem;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                transition: 0.2s;
+
+                &:hover{
+                    background-color: rgb(170, 142, 50);
+                    color: rgb(26, 27, 29);
+                }
+            }
+        }
+
+        p{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(66, 63, 63);
+            align-items: center;
+            font-family: beaufort;
+            color: rgb(245, 241, 226);
+            font-size: 1.4rem;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+#contactFooter{
+    background-color: rgb(26, 27, 29);
+    grid-area: contactFooter;
+    border-top: 2px solid rgb(170, 142, 50);
+}
+
+
+
+#contactGrid{
+    background-color: rgb(52, 80, 113);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "contactNav contactNav" 
+    "contactForm contactForm"
+    "contactOptions contactOptions";
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr 6fr 0.5fr;
+}
+
+@media (min-width:1024px) {
+
+#contactForm{
+
+    .contactFormContainer{
+
+        .contactFormForm{
+            flex-direction: row;
+
+            .contactFormText{
+                width: 70%;
+
+                .contactFormTextArea{
+                    width: 80%;
+                    height: 60%;
+
+                    textarea{
+                        resize: none;
+                        width: 100%;
+                    }
+                }
+
+                .contactFormTextInput{
+                    width: 100%;
+
+                    input{
+                        width: 50%
+                    }
+                }
+            }
+
+            .contactFormInputs{
+                height: 100%;
+                width: 30%;
+
+                .contactFormInputsImg{
+                    display: flex;
+
+                    &:hover{
+                        background-image: url(../img/contactteemo2.png);
+                    }
+                }
+
+                .contactFormInputsInputs{
+                    width: 100%;
+                    height: 40%;
+
+                    input{
+                        width: 50%
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contactOptions{
+    display: flex;
+    flex-direction: column;
+    grid-area: contactOptions;
+}
+
+#contactGrid{
+    background-color: rgb(52, 80, 113);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "contactNav contactNav" 
+    "contactForm contactOptions"
+    "contactFooter contactFooter";
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 10vh 6fr 0.5fr;
+}
+
+}
+    
+
