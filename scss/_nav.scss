@@ -9,7 +9,6 @@
     height: 10vh;
 }
 
-
 .navSpan{
     display: none;
 }
@@ -64,16 +63,15 @@
                 font-size: 1.5rem;
                 letter-spacing: 2px;
                 transition: 0.3s;
-            }
 
                 &:hover{
                     background-color: rgb(170, 142, 50);
                     color: rgb(26, 27, 29);
                 }
+            }
         }
     }
 }
-
 
 @media (min-width:768px) {
     

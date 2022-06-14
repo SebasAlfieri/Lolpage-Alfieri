@@ -68,7 +68,7 @@
   transition: 0.3s;
 }
 
-.nav .nav_selectors_container .nav_selectors:hover {
+.nav .nav_selectors_container .nav_selectors a:hover {
   background-color: #aa8e32;
   color: #1a1b1d;
 }
@@ -643,7 +643,7 @@
     height: 75%;
   }
   .discoverContainer .discoverTop:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1s;
   }
   .discoverContainer .discoverBot {
@@ -967,6 +967,10 @@
 
 .btn {
   width: 100%;
+}
+
+#skinsHtml {
+  overflow-x: hidden;
 }
 
 #skinsBody {
