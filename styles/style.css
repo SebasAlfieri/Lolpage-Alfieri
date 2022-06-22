@@ -105,7 +105,7 @@
   scroll-behavior: smooth;
 }
 
-#h1title {
+h1 {
   font-size: 3rem;
   border-bottom: 0px solid white;
 }
@@ -149,7 +149,7 @@
   margin-bottom: 0vh;
 }
 
-.article .group h1 {
+.article .group h2 {
   font-size: 2.5rem;
   width: 100%;
   border-bottom: 1px solid #aaaaaa;
@@ -174,7 +174,7 @@
   align-items: center;
 }
 
-.article .group .content .content_title h2 {
+.article .group .content .content_title h3 {
   margin: 0;
   padding-left: 5%;
   border-bottom: 1px solid white;
@@ -360,7 +360,7 @@
   display: grid;
   gap: 5px;
   width: 100%;
-  height: 100%;
+  height: 90%;
   grid-template-areas: "leonaContainer" "luluContainer" "threshContainer" "sennaContainer";
   grid-template-columns: 100%;
   grid-template-rows: 25% 25% 25% 25%;
@@ -450,6 +450,7 @@
   width: 100%;
   height: 25%;
   justify-content: center;
+  align-items: center;
   border-top: 2px solid #aa8e32;
   background-color: rgba(26, 27, 29, 0.953);
   color: #aa8e32;
@@ -481,8 +482,11 @@
     background-position: center;
     grid-area: sennaContainer;
   }
-  .champTexts .champTextContainer {
-    font-size: 1.4rem;
+  #championsGrid #leonaContainer .champTexts .champTextContainer,
+  #championsGrid #threshContainer .champTexts .champTextContainer,
+  #championsGrid #luluContainer .champTexts .champTextContainer,
+  #championsGrid #sennaContainer .champTexts .champTextContainer {
+    font-size: 1.8rem;
   }
 }
 
@@ -653,6 +657,19 @@
   }
   .discoverContainer .discoverBot .discoverBotText {
     width: 80%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .discoverContainer .discoverTop {
+    height: 75%;
+  }
+  .discoverContainer .discoverTop:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .discoverContainer .discoverBot .discoverBotText {
+    font-size: 1.3rem;
   }
 }
 

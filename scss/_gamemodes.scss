@@ -114,6 +114,29 @@
 
             .discoverBotText{
                 width: 80%;
+
+            }
+        }
+    }
+}
+
+@media (min-width:1440px) {
+
+    .discoverContainer{
+
+        .discoverTop{
+            height: 75%;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: 1s;
+            }
+        }
+
+        .discoverBot{
+
+            .discoverBotText{
+                font-size: 1.3rem;
             }
         }
     }

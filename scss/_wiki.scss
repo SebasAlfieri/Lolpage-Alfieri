@@ -2,7 +2,7 @@
     scroll-behavior: smooth;
 }
 
-#h1title{
+h1{
     font-size: 3rem;
     border-bottom: 0px solid white;
 }
@@ -46,7 +46,7 @@
         margin: 5vh;
         margin-bottom: 0vh;
 
-        h1{
+        h2{
             font-size: 2.5rem;
             width: 100%;
             border-bottom: 1px solid rgb(170, 170, 170);
@@ -70,7 +70,7 @@
                 align-items: center;
             }
 
-            .content_title h2{
+            .content_title h3{
                 margin: 0;
                 padding-left: 5%;
                 border-bottom: 1px solid white;
