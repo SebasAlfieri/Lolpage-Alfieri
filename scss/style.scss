@@ -1,3 +1,4 @@
+@import "operaciones";
 @import "nav";
 @import "wiki";
 @import "champs";
@@ -6,6 +7,7 @@
 @import "contact";
 @import "pay";
 @import "skins";
+
 
 @font-face {
     font-family: beaufort;
@@ -16,6 +18,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#wikiFooter,
+#discoverFooter,
+#skinsFooter{
+    background-color: $negro;
+    border-top: 2px solid $dorado;
+    display: flex;
+    height: 5vh;
+    margin-top: 5vh;
+
+    span{
+        display: inline-block;
+        margin: auto;
+        color: white;
+        justify-self: center;
+    }
 }
 
 

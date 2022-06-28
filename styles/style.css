@@ -29,8 +29,8 @@
   height: 60%;
   background-image: url(../img/logo.png);
   background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   transition: 0.3s;
 }
 
@@ -56,9 +56,9 @@
 
 .nav .nav_selectors_container .nav_selectors a {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  justify-content: center;
   height: 100%;
   width: 100%;
   color: #aa8e32;
@@ -324,6 +324,8 @@ h1 {
   }
   .aside .aside_container .aside_item a {
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-decoration-line: none;
     text-align: center;
@@ -332,8 +334,6 @@ h1 {
     transition: 0.3s;
     font-size: 20px;
     letter-spacing: 2px;
-    justify-content: center;
-    align-items: center;
   }
   .aside .aside_container .aside_item a:hover {
     background-color: #aa8e32;
@@ -446,11 +446,11 @@ h1 {
 
 #championsGrid .champTexts .champTextContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   width: 100%;
   height: 25%;
-  justify-content: center;
-  align-items: center;
   border-top: 2px solid #aa8e32;
   background-color: rgba(26, 27, 29, 0.953);
   color: #aa8e32;
@@ -518,9 +518,8 @@ h1 {
 
 .index_play {
   display: flex;
-  margin: auto;
-  position: fixed;
   align-self: center;
+  position: fixed;
   background-color: 26, 27, 29, 1;
   width: 80%;
   height: 25%;
@@ -586,9 +585,10 @@ h1 {
 .discoverContainer .discoverBot {
   background: linear-gradient(0deg, rgba(26, 27, 29, 0.540004) 0%, #1a1b1d 76%);
   border-top: 1px solid #aa8e32;
-  display: flex;
   flex-direction: column;
   text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
   height: 40%;
@@ -695,8 +695,8 @@ h1 {
   background-size: cover;
   grid-area: contactForm;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 #contactForm .contactFormContainer {
@@ -711,9 +711,9 @@ h1 {
 
 #contactForm .contactFormContainer .contactFormTitle {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
   height: 15%;
   background-color: #1a1b1d;
@@ -732,10 +732,10 @@ h1 {
 
 #contactForm .contactFormContainer .contactFormForm .contactFormText {
   display: flex;
-  flex-direction: column;
-  width: 100%;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea {
@@ -747,6 +747,11 @@ h1 {
 #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea {
   resize: none;
   width: 100%;
+  font-size: 1.2rem;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea:focus {
+  outline: none;
 }
 
 #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput {
@@ -757,6 +762,7 @@ h1 {
 
 #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input {
   width: 50%;
+  height: 30px;
 }
 
 #contactForm .contactFormContainer .contactFormForm .contactFormInputs {
@@ -785,15 +791,33 @@ h1 {
 
 #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 60%;
+  height: 90%;
 }
 
 #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: white;
+  border-bottom: 1px solid #aa8e32;
   width: 70%;
+  transition: 0.3s;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input:focus {
+  border-bottom: 3px solid #aa8e32;
+  transform: scale(1.05);
+  outline: none;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input::placeholder {
+  color: rgba(170, 142, 50, 0.307);
+  font-style: italic;
 }
 
 #contactOptions {
@@ -840,9 +864,9 @@ h1 {
 #contactOptions .contactOptionsAnchors p {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: #423f3f;
-  align-items: center;
   font-family: beaufort;
   color: #f5f1e2;
   font-size: 1.4rem;
@@ -856,14 +880,18 @@ h1 {
   border-top: 2px solid #aa8e32;
 }
 
+#contactFooter span {
+  display: none;
+}
+
 #contactGrid {
-  background-color: #345071;
+  background-color: #1a1b1d;
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-areas: "contactNav contactNav"  "contactForm contactForm" "contactOptions contactOptions";
   grid-template-columns: 8fr 2fr;
-  grid-template-rows: 1fr 6fr 0.5fr;
+  grid-template-rows: 10vh 6fr 0.5fr;
 }
 
 @media (min-width: 1024px) {
@@ -880,12 +908,17 @@ h1 {
   #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea {
     resize: none;
     width: 100%;
+    font-size: 1.4rem;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea:focus {
+    outline: none;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput {
     width: 100%;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input {
     width: 50%;
+    height: 30px;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormInputs {
     height: 100%;
@@ -902,12 +935,40 @@ h1 {
     height: 40%;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input {
-    width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    border-bottom: 1px solid #aa8e32;
+    width: 90%;
+    transition: 0.3s;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input:focus {
+    border-bottom: 3px solid #aa8e32;
+    transform: scale(1.05);
+    outline: none;
+  }
+  #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input::placeholder {
+    color: rgba(170, 142, 50, 0.307);
+    font-style: italic;
   }
   #contactOptions {
     display: flex;
     flex-direction: column;
     grid-area: contactOptions;
+  }
+  #contactFooter {
+    background-color: #1a1b1d;
+    grid-area: contactFooter;
+    border-top: 2px solid #aa8e32;
+    display: flex;
+  }
+  #contactFooter span {
+    display: inline-block;
+    margin: auto;
+    color: white;
+    justify-self: center;
   }
   #contactGrid {
     background-color: #345071;
@@ -932,9 +993,10 @@ h1 {
   top: 0;
   left: 0;
   font-size: 3rem;
-  margin-top: 5vh;
-  margin-left: 5vh;
+  margin-top: 1vh;
+  margin-left: 1vh;
   transition: 0.5s;
+  color: #a50c0c;
 }
 
 .payBody .payBack:hover {
@@ -947,15 +1009,11 @@ h1 {
 
 .payBody .payArticle {
   padding: 50px;
-  background-image: url(../img/points.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border: 2px solid #a50c0c;
+  width: 80%;
 }
 
 .payBody .payArticle .payContainer {
-  background-color: rgba(255, 255, 255, 0.814);
   width: 100%;
   height: 100%;
   display: grid;
@@ -980,14 +1038,85 @@ h1 {
   margin-top: 20vh;
   background-color: #545454;
   border-top: 2px solid red;
+  display: flex;
+}
+
+.payBody .payFooter span {
+  display: inline-block;
+  margin: auto;
+  color: white;
+  justify-self: center;
 }
 
 .btn {
   width: 100%;
 }
 
-#skinsHtml {
-  overflow-x: hidden;
+@media (min-width: 1024px) {
+  .payBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/points.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .payBody .payBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    transition: 0.5s;
+  }
+  .payBody .payBack:hover {
+    transform: scale(1.2);
+  }
+  .payBody .payTitle {
+    margin-top: 5vh;
+  }
+  .payBody .payArticle {
+    padding: 50px;
+    border: 2px solid #a50c0c;
+    background-color: rgba(255, 255, 255, 0.814);
+    width: 90%;
+  }
+  .payBody .payArticle .payContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 20px;
+  }
+  .payBody .payArticle .payContainer .row {
+    gap: 20px;
+  }
+  .payBody .payArticle .payContainer .row .card img {
+    width: 50%;
+    height: 50%;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+  }
+  .payBody .payFooter {
+    width: 100%;
+    height: 10vh;
+    margin-top: 20vh;
+    background-color: #545454;
+    border-top: 2px solid red;
+    display: flex;
+  }
+  .payBody .payFooter span {
+    display: inline-block;
+    margin: auto;
+    color: white;
+    justify-self: center;
+  }
+  .btn {
+    width: 100%;
+  }
 }
 
 #skinsBody {
@@ -1056,13 +1185,6 @@ h1 {
   transform: rotate(-90deg);
 }
 
-.skinsFooter {
-  width: 100%;
-  height: 5vh;
-  border-top: 1px solid #aa8e32;
-  margin-top: 5vh;
-}
-
 .divisor {
   background-image: url(../img/divisor.png);
   background-position: center;
@@ -1081,6 +1203,25 @@ h1 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#wikiFooter,
+#discoverFooter,
+#skinsFooter {
+  background-color: #1a1b1d;
+  border-top: 2px solid #aa8e32;
+  display: flex;
+  height: 5vh;
+  margin-top: 5vh;
+}
+
+#wikiFooter span,
+#discoverFooter span,
+#skinsFooter span {
+  display: inline-block;
+  margin: auto;
+  color: white;
+  justify-self: center;
 }
 
 @keyframes textAppear {

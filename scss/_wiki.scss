@@ -37,7 +37,7 @@ h1{
     height: 100%;
     font-family: 'Space Grotesk', sans-serif;
     color: white;
-    background-color: rgb(26, 27, 29);
+    background-color: $negro;
     border-radius: 0;
 
     .group{
@@ -108,7 +108,7 @@ h1{
                             transition: 0.3s;
 
                             &:hover {
-                                background-color: rgb(170, 142, 50);
+                                background-color: $dorado;
                             }
                         }
                     }
@@ -171,7 +171,6 @@ h1{
 }
 
 
-
 @media (min-width:1024px) {
 
     .article{
@@ -183,7 +182,7 @@ h1{
         height: 100%;
         font-family: 'Space Grotesk', sans-serif;
         color: white;
-        background-color: rgb(26, 27, 29);
+        background-color: $negro;
         border-radius: 20px;
     }
 
@@ -205,7 +204,7 @@ h1{
         position: fixed;
         width: 20%;
         height: 80vh;
-        background-color: rgb(26, 27, 29);
+        background-color: $negro;
         font-family: 'Space Grotesk', sans-serif;
         color: white;
         border-radius: 20px;
@@ -226,10 +225,10 @@ h1{
                 align-items: center;
                 align-content: center;
                 justify-self: center;
-                border: 1px solid rgb(170, 142, 50);
+                border: 1px solid $dorado;
 
                 a{
-                    display: flex;
+                    @include flex-center;
                     color: white;
                     text-decoration-line: none;
                     text-align: center;
@@ -238,17 +237,15 @@ h1{
                     transition: 0.3s;
                     font-size: 20px;
                     letter-spacing: 2px;
-                    justify-content: center;
-                    align-items: center;
 
                     &:hover{
-                        background-color: rgb(170, 142, 50);
+                        background-color: $dorado;
                     }
                 }
             }
 
             #aside_title{
-                border: 0px solid rgb(170, 142, 50);
+                border: 0px solid $dorado;
                 text-align: center;
             }
 

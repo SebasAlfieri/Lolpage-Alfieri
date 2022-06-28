@@ -1,9 +1,5 @@
-#skinsHtml{
-        overflow-x: hidden;
-}
-
 #skinsBody{
-    background-color: rgb(26, 27, 29);
+    background-color: $negro;
 }
 
 .skinsNav{
@@ -69,18 +65,9 @@
     transform: rotate(-90deg);
 }
 
-.skinsFooter{
-    width: 100%;
-    height: 5vh;
-    border-top: 1px solid rgba(170, 142, 50, 1);
-    margin-top: 5vh;
-}
-
 .divisor{
     background-image: url(../img/divisor.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include bg-cover;
     width: 100%;
     height: 10vh;
 }

@@ -27,18 +27,15 @@
 
 .index_play{
     display: flex;
-    margin: auto;
-    position: fixed;
     align-self: center;
+    position: fixed;
     background-color: (26, 27, 29, 1);
     width: 80%;
     height: 25%;
     z-index: 20;
     background-image: url(../img/logoindex.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 2px solid rgb(170, 142, 50);
+    @include bg-contain;
+    border: 2px solid $dorado;
     background-color: rgba(26, 27, 29, 1);
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;

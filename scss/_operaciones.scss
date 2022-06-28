@@ -1,0 +1,26 @@
+$dorado: #aa8e32;
+$negro: #1a1b1d;
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin bg-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin bg-contain{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

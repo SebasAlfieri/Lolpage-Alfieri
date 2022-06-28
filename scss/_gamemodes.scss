@@ -9,9 +9,7 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include bg-cover;
     margin-bottom: 5vh;
     
         .discoverTop{
@@ -28,11 +26,10 @@
 
         .discoverBot{
             background: linear-gradient(0deg, rgba(26,27,29,0.5400035014005602) 0%, rgba(26,27,29,1) 76%);
-            border-top: 1px solid rgb(170, 142, 50);
-            display: flex;
+            border-top: 1px solid $dorado;
             flex-direction: column;
             text-align: center;
-            align-items: center;
+            @include flex-center;
             justify-content: space-evenly;
             height: 40%;
             width: 100%;

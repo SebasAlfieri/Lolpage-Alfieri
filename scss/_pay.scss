@@ -1,7 +1,5 @@
 .payBody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
 
     .payBack{
@@ -9,9 +7,10 @@
         top: 0;
         left: 0;
         font-size: 3rem;
-        margin-top: 5vh;
-        margin-left: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
         transition: 0.5s;
+        color: rgb(165, 12, 12);
 
         &:hover{
             transform: scale(1.2);
@@ -24,14 +23,10 @@
 
     .payArticle{
         padding: 50px;
-        background-image: url(../img/points.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         border: 2px solid rgb(165, 12, 12);
+        width: 80%;
 
         .payContainer{
-            background-color: rgba(255, 255, 255, 0.814);
             width: 100%;
             height: 100%;
             display: grid;
@@ -60,9 +55,101 @@
         margin-top: 20vh;
         background-color: rgb(84, 84, 84);
         border-top: 2px solid red;
+        display: flex;
+
+        span{
+            display: inline-block;
+            margin: auto;
+            color: white;
+            justify-self: center;
+        }
     }
 }
 
 .btn{
     width: 100%;
+    
+}
+
+
+@media (min-width:1024px) {
+
+    .payBody{
+        @include flex-center;
+        flex-direction: column;
+        background-image: url(../img/points.png);
+        @include bg-contain;
+    
+        .payBack{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 3rem;
+            margin-top: 5vh;
+            margin-left: 5vh;
+            transition: 0.5s;
+    
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        
+        .payTitle{
+            margin-top: 5vh;
+        }
+    
+        .payArticle{
+            padding: 50px;
+
+            border: 2px solid rgb(165, 12, 12);
+            background-color: rgba(255, 255, 255, 0.814);
+            width: 90%;
+    
+            .payContainer{
+
+                width: 100%;
+                height: 100%;
+                display: grid;
+                gap: 20px;
+    
+                .row{
+                    gap: 20px;
+    
+                    .card{
+    
+                        img{
+                            width: 50%;
+                            height: 50%;
+                            justify-items: center;
+                            align-items: center;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .payFooter{
+            width: 100%;
+            height: 10vh;
+            margin-top: 20vh;
+            background-color: rgb(84, 84, 84);
+            border-top: 2px solid red;
+            display: flex;
+
+                span{
+                    display: inline-block;
+                    margin: auto;
+                    color: white;
+                    justify-self: center;
+                }
+        }
+    }
+    
+    .btn{
+        width: 100%;
+    }
+    
+
+
 }

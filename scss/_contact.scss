@@ -1,5 +1,5 @@
 .contact_body{
-    background-color: rgb(26, 27, 29);
+    background-color: $negro;
     width: 100%;
     height: 100%;
 }
@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgb(26, 27, 29);
+    background: $negro;
     border-bottom: 2px solid rgb(170, 142, 50);
     grid-area: contactNav;
 }
@@ -19,27 +19,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: contactForm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 
     .contactFormContainer{
         display: flex;
         flex-direction: column;
-        background-color: rgb(26, 27, 29);
+        background-color: $negro;
         border: 1px solid rgb(170, 142, 50);
         border-radius: 5px;
         width: 80%;
         height: 80%;
 
         .contactFormTitle{
-            display: flex;
+            @include flex-center;
             text-align: center;
-            justify-content: center;
-            align-items: center;
             width: 100%;
             height: 15%;
-            background-color: rgb(26, 27, 29);
+            background-color: $negro;
             color: rgb(170, 142, 50);
             font-family: beaufort;
             font-size: 1.6rem;
@@ -54,11 +50,10 @@
             height: 85%;
 
             .contactFormText{
-                display: flex;
+                @include flex-around;
                 flex-direction: column;
                 width: 100%;
-                justify-content: space-around;
-                align-items: center;
+
 
                 .contactFormTextArea{
                     display: flex;
@@ -68,6 +63,11 @@
                     textarea{
                         resize: none;
                         width: 100%;
+                        font-size: 1.2rem;
+                        
+                        &:focus{
+                            outline: none;
+                        }
                     }
                 }
 
@@ -77,7 +77,8 @@
                     width: 100%;
 
                     input{
-                        width: 50%
+                        width: 50%;
+                        height: 30px;
                     }
                 }
             }
@@ -108,15 +109,31 @@
                 }
 
                 .contactFormInputsInputs{
-                    display: flex;
+                    @include flex-around;
                     flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
                     width: 100%;
-                    height: 60%;
+                    height: 90%;
 
                     input{
+                        background-color: rgba(255, 255, 255, 0);
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 1.5rem;
+                        color: white;
+                        border-bottom: 1px solid rgb(170, 142, 50);
                         width: 70%;
+                        transition: 0.3s;
+
+                        &:focus{
+                            border-bottom: 3px solid rgb(170, 142, 50);
+                            transform: scale(1.05);
+                            outline: none;
+                        }
+
+                        &::placeholder{
+                            color: rgba(170, 142, 50, 0.307);
+                            font-style: italic;
+                        }
                     }
                 }
             }
@@ -126,7 +143,6 @@
     
     
 }
-
 
 #contactOptions{
     display: flex;
@@ -141,17 +157,13 @@
         height: 100%;
 
         .contactOptionsA{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
             width: 100%;
             height: 20%;
-            background-color:rgb(26, 27, 29);
+            background-color: $negro;
 
             a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center;
                 font-family: beaufort;
                 color: rgb(170, 142, 50);
                 font-size: 1.4rem;
@@ -162,17 +174,15 @@
 
                 &:hover{
                     background-color: rgb(170, 142, 50);
-                    color: rgb(26, 27, 29);
+                    color: $negro;
                 }
             }
         }
 
         p{
-            display: flex;
-            justify-content: center;
+            @include flex-center;
             text-align: center;
             background-color: rgb(66, 63, 63);
-            align-items: center;
             font-family: beaufort;
             color: rgb(245, 241, 226);
             font-size: 1.4rem;
@@ -184,15 +194,17 @@
 
 
 #contactFooter{
-    background-color: rgb(26, 27, 29);
+    background-color: $negro;
     grid-area: contactFooter;
-    border-top: 2px solid rgb(170, 142, 50);
+    border-top: 2px solid $dorado;
+
+    span{
+        display: none
+    }
 }
 
-
-
 #contactGrid{
-    background-color: rgb(52, 80, 113);
+    background-color:$negro;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -201,7 +213,7 @@
     "contactForm contactForm"
     "contactOptions contactOptions";
     grid-template-columns: 8fr 2fr;
-    grid-template-rows: 1fr 6fr 0.5fr;
+    grid-template-rows: 10vh 6fr 0.5fr;
 }
 
 @media (min-width:1024px) {
@@ -223,6 +235,11 @@
                     textarea{
                         resize: none;
                         width: 100%;
+                        font-size: 1.4rem;
+
+                        &:focus{
+                            outline: none;
+                        }
                     }
                 }
 
@@ -230,7 +247,8 @@
                     width: 100%;
 
                     input{
-                        width: 50%
+                        width: 50%;
+                        height: 30px;
                     }
                 }
             }
@@ -252,7 +270,25 @@
                     height: 40%;
 
                     input{
-                        width: 50%
+                        background-color: rgba(255, 255, 255, 0);
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 1.5rem;
+                        color: white;
+                        border-bottom: 1px solid rgb(170, 142, 50);
+                        width: 90%;
+                        transition: 0.3s;
+
+                        &:focus{
+                            border-bottom: 3px solid rgb(170, 142, 50);
+                            transform: scale(1.05);
+                            outline: none;
+                        }
+
+                        &::placeholder{
+                            color: rgba(170, 142, 50, 0.307);
+                            font-style: italic;
+                        }
                     }
                 }
             }
@@ -264,6 +300,20 @@
     display: flex;
     flex-direction: column;
     grid-area: contactOptions;
+}
+
+#contactFooter{
+    background-color: $negro;
+    grid-area: contactFooter;
+    border-top: 2px solid rgb(170, 142, 50);
+    display: flex;
+
+    span{
+        display: inline-block;
+        margin: auto;
+        color: white;
+        justify-self: center;
+    }
 }
 
 #contactGrid{
