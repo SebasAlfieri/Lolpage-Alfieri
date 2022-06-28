@@ -6,14 +6,18 @@
     margin-bottom: 5vh;
 }
 
+
 .skinsThresh{
     display: flex;
+    width: 100%;
     background: rgb(26,27,29);
     background: linear-gradient(273deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
 }
 
 .skinsLeona{
     display: flex;
+    margin: auto;
+    width: 100%;
     background: rgb(26,27,29);
     background: linear-gradient(90deg, rgba(26,27,29,1) 6%, rgba(170,142,50,1) 95%);
 }
@@ -46,10 +50,12 @@
 
 .f-end{
     justify-content: flex-end;
+    padding: 0;
 }
 
 .f-start{
     justify-content: flex-start;
+    padding: 0;
 }
 
 .skinsTdiv{

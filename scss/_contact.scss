@@ -15,9 +15,7 @@
 
 #contactForm{
     background-image: url(../img/contactformback.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include bg-cover;
     grid-area: contactForm;
     @include flex-center;
 
@@ -94,14 +92,10 @@
                 .contactFormInputsImg{
                     display:none;
                     background-image: url(../img/contactteemo.png);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
+                    @include bg-contain;
                     width: 100%;
                     height: 40%;
                     transition: 0.5s;
-
-
 
                     &:hover{
                         background-image: url(../img/contactteemo2.png);
@@ -132,6 +126,8 @@
 
                         &::placeholder{
                             color: rgba(170, 142, 50, 0.307);
+                            font-size: smaller;
+                            font-weight: 100;
                             font-style: italic;
                         }
                     }
@@ -139,9 +135,6 @@
             }
         }
     }
-
-    
-    
 }
 
 #contactOptions{

@@ -817,6 +817,8 @@ h1 {
 
 #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input::placeholder {
   color: rgba(170, 142, 50, 0.307);
+  font-size: smaller;
+  font-weight: 100;
   font-style: italic;
 }
 
@@ -1129,12 +1131,15 @@ h1 {
 
 .skinsThresh {
   display: flex;
+  width: 100%;
   background: #1a1b1d;
   background: linear-gradient(273deg, #1a1b1d 6%, #aa8e32 95%);
 }
 
 .skinsLeona {
   display: flex;
+  margin: auto;
+  width: 100%;
   background: #1a1b1d;
   background: linear-gradient(90deg, #1a1b1d 6%, #aa8e32 95%);
 }
@@ -1167,10 +1172,12 @@ h1 {
 
 .f-end {
   justify-content: flex-end;
+  padding: 0;
 }
 
 .f-start {
   justify-content: flex-start;
+  padding: 0;
 }
 
 .skinsTdiv {
