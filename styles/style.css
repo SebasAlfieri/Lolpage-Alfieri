@@ -130,7 +130,7 @@ h1 {
 }
 
 .article {
-  margin-top: 0vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   margin-left: 0;
@@ -274,6 +274,7 @@ h1 {
 
 @media (min-width: 1024px) {
   .article {
+    padding-top: 0;
     display: flex;
     margin-top: 15vh;
     flex-direction: column;
@@ -573,11 +574,17 @@ h1 {
 .discoverContainer .discoverTop {
   display: flex;
   justify-content: center;
+  margin: auto;
   height: 60%;
-  width: 100%;
+  width: 80%;
 }
 
-.discoverContainer .discoverTop:hover {
+.discoverContainer .discoverTop img {
+  height: 80%;
+  align-self: center;
+}
+
+.discoverContainer .discoverTop img:hover {
   transform: scale(1.2);
   transition: 1s;
 }
@@ -646,10 +653,6 @@ h1 {
   .discoverContainer .discoverTop {
     height: 75%;
   }
-  .discoverContainer .discoverTop:hover {
-    transform: scale(1.1);
-    transition: 1s;
-  }
   .discoverContainer .discoverBot {
     height: 25%;
     width: 100%;
@@ -663,10 +666,6 @@ h1 {
 @media (min-width: 1440px) {
   .discoverContainer .discoverTop {
     height: 75%;
-  }
-  .discoverContainer .discoverTop:hover {
-    transform: scale(1.1);
-    transition: 1s;
   }
   .discoverContainer .discoverBot .discoverBotText {
     font-size: 1.3rem;
@@ -763,6 +762,14 @@ h1 {
 #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input {
   width: 50%;
   height: 30px;
+  border: 1px solid #aa8e32;
+  background-color: #1a1b1d;
+  color: #aa8e32;
+}
+
+#contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput input:active {
+  background-color: #565353;
+  transform: scale(1.1);
 }
 
 #contactForm .contactFormContainer .contactFormForm .contactFormInputs {
@@ -913,7 +920,7 @@ h1 {
     font-size: 1.4rem;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextArea textarea:focus {
-    outline: none;
+    outline: 2px solid #aa8e32;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormText .contactFormTextInput {
     width: 100%;
@@ -950,10 +957,13 @@ h1 {
     border-bottom: 3px solid #aa8e32;
     transform: scale(1.05);
     outline: none;
+    background-color: rgba(205, 208, 192, 0.672);
+    color: #1a1b1d;
   }
   #contactForm .contactFormContainer .contactFormForm .contactFormInputs .contactFormInputsInputs input::placeholder {
-    color: rgba(170, 142, 50, 0.307);
+    color: rgba(228, 225, 214, 0.307);
     font-style: italic;
+    text-align: center;
   }
   #contactOptions {
     display: flex;

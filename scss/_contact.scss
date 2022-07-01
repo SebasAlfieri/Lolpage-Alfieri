@@ -77,6 +77,14 @@
                     input{
                         width: 50%;
                         height: 30px;
+                        border: 1px solid $dorado;
+                        background-color: $negro;
+                        color: $dorado;
+
+                        &:active{
+                            background-color: rgb(86, 83, 83);
+                            transform: scale(1.1);
+                        }
                     }
                 }
             }
@@ -231,7 +239,7 @@
                         font-size: 1.4rem;
 
                         &:focus{
-                            outline: none;
+                            outline: 2px solid $dorado;
                         }
                     }
                 }
@@ -276,11 +284,14 @@
                             border-bottom: 3px solid rgb(170, 142, 50);
                             transform: scale(1.05);
                             outline: none;
+                            background-color: rgba(205, 208, 192, 0.672);
+                            color: $negro;
                         }
 
                         &::placeholder{
-                            color: rgba(170, 142, 50, 0.307);
+                            color: rgba(228, 225, 214, 0.307);
                             font-style: italic;
+                            text-align: center;
                         }
                     }
                 }
