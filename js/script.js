@@ -1,0 +1,1 @@
+alert('Esta página fue entrega final al curso de Coderhouse\nNo presenta un diseño ideal ya que la idea era implementar casi todos los conocimientos por mas que sea de manera forzadada para cumplir las expectativas del trabajo.')

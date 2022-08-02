@@ -129,6 +129,10 @@ h1 {
   display: none;
 }
 
+#adcc {
+  font-size: 3rem;
+}
+
 .article {
   padding-top: 10vh;
   display: flex;
